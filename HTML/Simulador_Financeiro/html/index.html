@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Simulador Financeiro</title>
+</head>
+
+<body>
+    <center>
+        <!--Dados a ser recebido pelo usuário e botão para calcular possível perda-->
+        <h1>Simulador Financeiro</h1>
+        <h3>(Possível Prejuízo Financeiro)</h3>
+        <p>Razão Social:<input id="input_Razao_Social" type="text"></p>
+        <p>Estoque de Peixes: <input id="input_estoque" type="number"></p>
+        <p>Custo do Estoque: <input id="input_valor_peixe" type="number"></p>
+        <p>Média de Peixes Vendidos: <input id="input_peixe_vendido" type="number"></p>
+
+        <button onclick="Calcular()">Calcular</button>
+        <p id="p_retorno"></p>
+    </center>
+</body>
+
+</html>
+
+<script>
+    function Calcular() {
+        //Dados Recebidos pelos Inputs
+        var Razao_Social = input_Razao_Social.value;
+        var Estoque = Number(input_estoque.value);
+        var Valor_Peixe = Number(input_valor_peixe.value);
+        var Peixe_Vendido = Number(input_peixe_vendido.value);
+
+        var qtdPeixes = Estoque - Peixe_Vendido;
+        var Valor_Prejuizo = qtdPeixes * Valor_Peixe;
+        var Porcent_Peixes = qtdPeixes * (100 / Estoque);
+
+        p_retorno.innerHTML = `${Razao_Social}, a quantidade de ${qtdPeixes} Peixes que restaram no estoque poderão,<br>
+        ter um prejuízo de R$${Valor_Prejuizo}, ou seja ${Porcent_Peixes}% dos
+        Peixes`;
+    }
+</script>

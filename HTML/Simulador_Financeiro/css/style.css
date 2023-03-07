@@ -1,0 +1,27 @@
+body {
+    background: #2f2f2f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    color: #ffffff;
+}
+
+h1{
+    width: 400px;
+    color: #ff0000;
+}
+
+h3{
+    width: 400px;
+    color: #ff0000;
+}
+
+button {
+    border: 3px solid #ff0000;
+    border-radius: 10%;
+    font-size: 25px;
+    font-family: cursive;
+    background-color: #FFFFFF;
+    color: black;
+}
