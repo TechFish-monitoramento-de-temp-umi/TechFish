@@ -14,9 +14,9 @@
         <h1>Simulador Financeiro</h1>
         <h3>(Possível Prejuízo Financeiro)</h3>
         <p>Razão Social:<input id="input_Razao_Social" type="text"></p>
-        <p>Estoque de Peixes: <input id="input_estoque" type="number"></p>
-        <p>Custo do Estoque: <input id="input_valor_peixe" type="number"></p>
-        <p>Média de Peixes Vendidos: <input id="input_peixe_vendido" type="number"></p>
+        <p>Total de Peixes no Estoque: <input id="input_estoque" type="number"></p>
+        <p>Custo dos Peixes (Para Estoque): <input id="input_valor_peixe" type="number"></p>
+        <p>Total de Peixes Vendidos: <input id="input_peixe_vendido" type="number"></p>
 
         <button onclick="Calcular()">Calcular</button>
         <p id="p_retorno"></p>
@@ -27,18 +27,32 @@
 
 <script>
     function Calcular() {
-        //Dados Recebidos pelos Inputs
+        //Dados Recebidos pelos Inputs sendo colocado em variáveis
         var Razao_Social = input_Razao_Social.value;
         var Estoque = Number(input_estoque.value);
         var Valor_Peixe = Number(input_valor_peixe.value);
         var Peixe_Vendido = Number(input_peixe_vendido.value);
 
+        // Cálculos para verificar se poderá haver prejuízos
         var qtdPeixes = Estoque - Peixe_Vendido;
         var Valor_Prejuizo = qtdPeixes * Valor_Peixe;
         var Porcent_Peixes = qtdPeixes * (100 / Estoque);
 
+        // Apresentando ao cliente a mensagem caso tenha peixes que não foram vendidos.
+        if (qtdPeixes > 0){
         p_retorno.innerHTML = `${Razao_Social}, a quantidade de ${qtdPeixes} Peixes que restaram no estoque poderão,<br>
         ter um prejuízo de R$${Valor_Prejuizo}, ou seja ${Porcent_Peixes}% dos
         Peixes`;
+        }
+
+        // Apresentando que não haverá lógica pois foi vendido a mais do que tem no estoque.
+        if (qtdPeixes < 0) {
+            alert('Foi digitado que os peixes vendidos é mais do que há no estoque! Por Favor digite uma quantidade lógica.')
+        }
+
+        // Apresentando que não haverá prejuízos, porque todos os peixes foram vendidos.
+        if (qtdPeixes == 0){
+            alert('Não haverá prejuízos, porque foram vendidos todos os peixes!')
+        }
     }
 </script>
