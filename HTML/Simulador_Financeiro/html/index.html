@@ -16,10 +16,11 @@
         <p>Razão Social:<input id="input_Razao_Social" type="text"></p>
         <p>Total de Peixes no Estoque: <input id="input_estoque" type="number"></p>
         <p>Custo dos Peixes (Para Estoque): <input id="input_valor_peixe" type="number"></p>
-        <p>Total de Peixes Vendidos: <input id="input_peixe_vendido" type="number"></p>
+        <p>Total de Peixes Utilizados: <input id="input_peixe_utilizado" type="number"></p>
 
         <button onclick="Calcular()">Calcular</button>
-        <p id="p_retorno"></p>
+        
+        <div class="div_retorno" id="div_retorno"></d>
     </center>
 </body>
 
@@ -31,18 +32,22 @@
         var Razao_Social = input_Razao_Social.value;
         var Estoque = Number(input_estoque.value);
         var Valor_Peixe = Number(input_valor_peixe.value);
-        var Peixe_Vendido = Number(input_peixe_vendido.value);
+        var Peixe_Utilizado = Number(input_peixe_utilizado.value);
 
         // Cálculos para verificar se poderá haver prejuízos
-        var qtdPeixes = Estoque - Peixe_Vendido;
+        var qtdPeixes = Estoque - Peixe_Utilizado;
         var Valor_Prejuizo = qtdPeixes * Valor_Peixe;
         var Porcent_Peixes = qtdPeixes * (100 / Estoque);
 
         // Apresentando ao cliente a mensagem caso tenha peixes que não foram vendidos.
         if (qtdPeixes > 0){
-        p_retorno.innerHTML = `${Razao_Social}, a quantidade de ${qtdPeixes} Peixes que restaram no estoque poderão,<br>
-        ter um prejuízo de R$${Valor_Prejuizo}, ou seja ${Porcent_Peixes}% dos
-        Peixes`;
+        div_retorno.innerHTML = `
+        <p class="p_titulo_retorno">${Razao_Social} - O que poderá acontecer caso não use nossos serviços: </p><br>
+        ° ${qtdPeixes} Peixes ficaram no estoque. ${Porcent_Peixes}% dos peixes que estavam armazenados. <br><br>
+        ° R$${Valor_Prejuizo} foram gastos (desperdiçados) nos peixes não utilizados. <br><br>
+
+        Com os nossos serviços de monitoramento garantimos que 10 a 12 dias é o tempo máximo para os peixes serem utilizados.
+        `;
         }
 
         // Apresentando que não haverá lógica pois foi vendido a mais do que tem no estoque.
