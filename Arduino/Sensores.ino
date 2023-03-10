@@ -3,8 +3,8 @@
 #include <DHT.h>
 
 // Definição dos pinos para entrada de dados 
-#define DHTPIN A1
-#define LM35PIN A0
+#define DHTPIN A1;
+#define LM35PIN A0;
 
 // inicialização Do monitor serial, das entradas(pins)
 void setup()
@@ -22,12 +22,11 @@ void loop()
 {
     // Definição das Variaveis
     float dht11_umidade = dht.readHumidity();
-    float dht11_temperatura = dht.readTemperature();
     float lm35_temperatura = analogRead(LM35PIN);
     lm35_temperatura = (lm35_temperatura * 0.00488) * 100;
 
     // Verificação do funcionamento dos sensores
-    if(isnan dht11_temperatura or isnan lm35_temperatura)
+    if(isnan dht11_umidade or isnan lm35_temperatura)
     {
         // mensagem de erro caso não consiga captar qualquer informação
         Serial.println("Erro ao captar os dados");
@@ -45,6 +44,8 @@ void loop()
 }
 
 // FIM DO CODIGO 
+
+---------------------------------------------------------------------------
 
 // Codigos para captação de dados com outros sensores (Luminosidade e Bloqueio/Proximidade)
 
