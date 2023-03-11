@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pr-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,17 +11,23 @@
 
 <body>
     <center>
-        <!--Dados a ser recebido pelo usuário e botão para calcular possível perda-->
-        <h1>Simulador Financeiro</h1>
-        <h3>(Possível Prejuízo Financeiro)</h3>
-        <p>Razão Social:<input id="input_Razao_Social" type="text"></p>
-        <p>Total de Peixes no Estoque: <input id="input_estoque" type="number"></p>
-        <p>Custo dos Peixes (Para Estoque): <input id="input_valor_peixe" type="number"></p>
-        <p>Total de Peixes Utilizados: <input id="input_peixe_utilizado" type="number"></p>
+            <div class="div_perguntas">
+                <!--Dados a ser recebido pelo usuário e botão para calcular possível perda-->
+                <br>
+                <h1>Simulador Financeiro</h1>
+                <h3>(Possível Prejuízo Financeiro)</h3>
+                <p>Razão Social:<input id="input_Razao_Social" type="text"></p>
+                <p>Total de Peixes no Estoque: <input id="input_estoque" type="number"></p>
+                <p>Custo dos Peixes (Para Estoque): <input id="input_valor_peixe" type="number"></p>
+                <p>Total de Peixes Utilizados: <input id="input_peixe_utilizado" type="number"></p>
 
-        <button onclick="Calcular()">Calcular</button>
-        
-        <div class="div_retorno" id="div_retorno"></d>
+                <button onclick="Calcular()">Calcular</button>
+            </div>
+
+            <br>
+
+            <div class="div_retorno" id="div_retorno"></div>
+
     </center>
 </body>
 
@@ -40,24 +47,27 @@
         var Porcent_Peixes = qtdPeixes * (100 / Estoque);
 
         // Apresentando ao cliente a mensagem caso tenha peixes que não foram vendidos.
-        if (qtdPeixes > 0){
-        div_retorno.innerHTML = `
-        <p class="p_titulo_retorno">${Razao_Social} - O que poderá acontecer caso não use nossos serviços: </p><br>
-        ° ${qtdPeixes} Peixes ficaram no estoque. ${Porcent_Peixes}% dos peixes que estavam armazenados. <br><br>
+        if (qtdPeixes > 0) {
+            //Deixando o fundo da div branco apenas quando chamar o if
+            div_retorno.style.backgroundColor = "#ffffff";
+
+            div_retorno.innerHTML = `
+        <br><p class="p_titulo_retorno">${Razao_Social}, esse é o <span style="color:red;">prejuízo</span> causado por não utilizar nossos serviços: </p><br>
+        ° ${qtdPeixes} Peixes ficaram no estoque. Equivale a ${Porcent_Peixes}% dos peixes que estavam armazenados. <br><br>
         ° R$${Valor_Prejuizo} foram gastos (desperdiçados) nos peixes não utilizados. <br><br>
 
-        Com os nossos serviços de monitoramento garantimos que 10 a 12 dias é o tempo máximo para os peixes serem utilizados.
+        Com os nossos serviços de monitoramento garantimos que 10 a 12 dias em uma temperatura média de 5°C é o tempo máximo para os peixes serem utilizados.
         `;
         }
 
         // Apresentando que não haverá lógica pois foi vendido a mais do que tem no estoque.
         if (qtdPeixes < 0) {
-            alert('Foi digitado que os peixes vendidos é mais do que há no estoque! Por Favor digite uma quantidade lógica.')
+            alert('Foi digitado que a quantidade de peixes vendidos é maior do que há no estoque! Por Favor digite uma quantidade lógica.')
         }
 
         // Apresentando que não haverá prejuízos, porque todos os peixes foram vendidos.
-        if (qtdPeixes == 0){
-            alert('Não haverá prejuízos, porque foram vendidos todos os peixes!')
+        if (qtdPeixes == 0) {
+            alert('Não haverá prejuízos, todos os peixes foram vendidos !')
         }
     }
 </script>
