@@ -20,13 +20,16 @@ void setup()
 // codigo que irá ser repetido infinitamente (enquanto houver energia na placa do Arduino)
 void loop()
 {
+
     // Definição das Variaveis
     float dht11_umidade = dht.readHumidity();
+    float dht11_temperatura = dht.readTemperature();
     float lm35_temperatura = analogRead(LM35PIN);
     lm35_temperatura = (lm35_temperatura * 0.00488) * 100;
+    float Media_temperatura = (lm35_temperatura + dht11_temperatura) / 2;
 
     // Verificação do funcionamento dos sensores
-    if(isnan dht11_umidade or isnan lm35_temperatura)
+    if(isnan dht11_umidade or isnan dht11_temperatura or isnan lm35_temperatura)
     {
         // mensagem de erro caso não consiga captar qualquer informação
         Serial.println("Erro ao captar os dados");
@@ -36,7 +39,7 @@ void loop()
         // Os dados que serão apresentados no monitor serial e futuramente no banco de dados
         Serial.print(dht11_umidade);
         Serial.print(";");
-        Serial.print(lm35_temperatura);
+        Serial.print(Media_temperatura);
         Serial.println(";");
 
     }
