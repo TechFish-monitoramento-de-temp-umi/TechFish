@@ -18,7 +18,7 @@
                 <h3>(Possível Prejuízo Financeiro)</h3>
                 <p>Razão Social:<input id="input_Razao_Social" type="text"></p>
                 <p>Total de Peixes no Estoque: <input id="input_estoque" type="number"></p>
-                <p>Custo dos Peixes (Para Estoque): <input id="input_valor_peixe" type="number"></p>
+                <p>Custo por Peixe no Estoque: <input id="input_valor_peixe" type="number"></p>
                 <p>Total de Peixes Utilizados: <input id="input_peixe_utilizado" type="number"></p>
 
                 <button onclick="Calcular()">Calcular</button>
@@ -52,11 +52,11 @@
             div_retorno.style.backgroundColor = "#ffffff";
 
             div_retorno.innerHTML = `
-        <br><p class="p_titulo_retorno">${Razao_Social}, esse é o <span style="color:red;">prejuízo</span> causado por não utilizar nossos serviços: </p><br>
+        <br><p class="p_titulo_retorno">${Razao_Social}, esse é o <span style="color:red;">possível prejuízo</span> causado por não utilizar nossos serviços: </p><br>
         ° ${qtdPeixes} Peixes ficaram no estoque. Equivale a ${Porcent_Peixes}% dos peixes que estavam armazenados. <br><br>
         ° R$${Valor_Prejuizo} foram gastos (desperdiçados) nos peixes não utilizados. <br><br>
 
-        Com os nossos serviços de monitoramento garantimos que 10 a 12 dias em uma temperatura média de 5°C é o tempo máximo para os peixes serem utilizados.
+        Com os nossos serviços de monitoramento garantimos que de 10 a 12 dias, em uma temperatura média de 5°C, é o tempo máximo para os peixes serem utilizados.
         `;
         }
 
