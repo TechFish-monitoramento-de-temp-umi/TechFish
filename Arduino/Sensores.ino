@@ -11,7 +11,7 @@ void setup()
 {
 
   pinMode(DHTPIN, INPUT);
-  pinMode(LM35PIN, INPUPT);
+  pinMode(LM35PIN, INPUT);
   Serial.begin(9600);
   dht.begin();
 
@@ -29,7 +29,7 @@ void loop()
     float Media_temperatura = (lm35_temperatura + dht11_temperatura) / 2;
 
     // Verificação do funcionamento dos sensores
-    if(isnan dht11_umidade or isnan dht11_temperatura or isnan lm35_temperatura)
+    if(isnan dht11_umidade or isnan Media_temperatura)
     {
         // mensagem de erro caso não consiga captar qualquer informação
         Serial.println("Erro ao captar os dados");
@@ -54,7 +54,15 @@ void loop()
 
 //  #define LUMIPIN A2
 //  #define CHAVPIN 7
-//  pinMode(CHAVPIN, INPUT);
+
+// void setup(){
+
+//     pinMode(CHAVPIN, INPUT);
+
+// }
+
+// void loop(){
+
 //  int chave = digitalRead(7);
 
 //  if (chave == 0)
@@ -70,3 +78,5 @@ void loop()
  
 //  Serial.print(luminosidade);
 //  Serial.print(";");
+
+// }
