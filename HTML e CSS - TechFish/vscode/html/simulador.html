@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="simulador.css">
+    <title>Simulador Financeiro</title>
+    <link rel="stylesheet" href="../css/style-simulador.css">
+    <link rel="shortcut icon" href="../img/logo.PNG" type="image/x-icon">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container-header">
+            <img src="../img/logo.PNG">
+            <ul class="NavBar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="">Gráficos</a></li>
+                <li><a href="Simulador.html">Simulador</a></li>
+                <li><a href="Cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="geral">
+            <div class="calculadora">
+                <h1>Simulador Financeiro</h1>
+                <p>Razão Social:<input id="input_Razao_Social" type="text"></p>
+                <p>Insira a espécie do peixe:<input id="id_especie"> </p>
+                <p>Custo do quilo do peixe <input id="input_valor_peixe" type="number"></p>
+                <p>Total de quilos perdidos no mês: <input id="input_peixe_utilizado" type="number"></p>
+                <button onclick="Calcular()">Calcular</button>
+            </div>
+            <div id="div_retorno" class="div-retorno">
+                Ao clicar em calcular, os dados analisados aparecerão aqui!
+            </div>
+        </div>
+</body>
+</html>
+
+<script>
+    function Calcular() {
+        //Dados Recebidos pelos Inputs sendo colocado em variáveis
+        var Razao_Social = input_Razao_Social.value;
+        var especie = id_especie.value;
+
+        var Valor_Peixe = Number(input_valor_peixe.value);
+        var Peixe_perdido = Number(input_peixe_utilizado.value);
+
+        // Cálculos para verificar se poderá haver prejuízos
+        // var qtdPeixes = Estoque - Peixe_Utilizado;
+        var Valor_Prejuizo = Peixe_perdido * Valor_Peixe;
+        // var Porcent_Peixes = Math.floor(qtdPeixes * (100 / Estoque));
+
+        // Apresentando ao cliente a mensagem caso tenha peixes que não foram vendidos.
+        if (Peixe_perdido > 0) {
+            //Deixando o fundo da div branco apenas quando chamar o if
+            div_retorno.innerHTML = `
+        <br><p class="p_titulo_retorno">${Razao_Social}, esse é o <span> prejuízo</span> causado por não utilizar nossos serviços: </p><br>
+        ° ${Peixe_perdido} quilos de  ${especie} ficaram no estoque.<br>
+        ° R$${Valor_Prejuizo} foram gastos (desperdiçados) nos peixes não utilizados. <br><br>
+        Com os nossos serviços de monitoramento garantimos que de 10 a 12 dias, em uma temperatura média de 5°C, é o tempo máximo para os peixes serem utilizados.
+        `;
+        }
+
+    
+       
+
+        // Apresentando que não haverá prejuízos, porque todos os peixes foram vendidos.
+        if (Peixe_perdido == 0) {
+            alert('Não haverá prejuízos, todos os peixes foram vendidos !')
+        }
+    }
+</script>
