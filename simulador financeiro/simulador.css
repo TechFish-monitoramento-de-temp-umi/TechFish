@@ -1,6 +1,7 @@
 body {
-    background: #1f2837;
+    background-image: url(https://www.djapa.com.br/wp-content/uploads/2019/11/IMGP3652.jpg);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-size: cover;
 }
 
 p {
@@ -21,7 +22,7 @@ p {
 h1 {
     margin: 30px;
     width: 400px;
-    color: #de216b;
+    color: black;
 }
 
 h3 {
@@ -31,10 +32,10 @@ h3 {
 }
 
 button {
-    border: 3px solid #de216b;
+    border: 3px solid white;
     font-size: 20px;
     font-family: cursive;
-    background-color: #de216b;
+    background-color: black;
     color: rgb(255, 255, 255);
     height: 50px;
     width: 300px;
@@ -43,7 +44,7 @@ button {
 }
 
 .div_perguntas {
-    background-color: #FFFFFF;
+    background-color: rgb(255, 255, 255, 0.8);
     height: 500px;
     width: 600px;
     border-radius: 20px;

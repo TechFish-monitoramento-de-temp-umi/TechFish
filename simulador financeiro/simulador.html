@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="simulador.css">
     <title>Simulador Financeiro</title>
 </head>
 
@@ -15,11 +15,12 @@
                 <!--Dados a ser recebido pelo usuário e botão para calcular possível perda-->
                 <br>
                 <h1>Simulador Financeiro</h1>
-                <h3>(Possível Prejuízo Financeiro)</h3>
+                
                 <p>Razão Social:<input id="input_Razao_Social" type="text"></p>
-                <p>Total de Peixes no Estoque: <input id="input_estoque" type="number"></p>
-                <p>Custo por Peixe no Estoque: <input id="input_valor_peixe" type="number"></p>
-                <p>Total de Peixes Utilizados: <input id="input_peixe_utilizado" type="number"></p>
+                <p>Insira a espécie do peixe:<input id="id_especie"> </p>
+            
+                <p>Custo do quilo do peixe <input id="input_valor_peixe" type="number"></p>
+                <p>Total de quilos perdidos no mês: <input id="input_peixe_utilizado" type="number"></p>
 
                 <button onclick="Calcular()">Calcular</button>
             </div>
@@ -37,36 +38,34 @@
     function Calcular() {
         //Dados Recebidos pelos Inputs sendo colocado em variáveis
         var Razao_Social = input_Razao_Social.value;
-        var Estoque = Number(input_estoque.value);
+        var especie = id_especie.value;
+
         var Valor_Peixe = Number(input_valor_peixe.value);
-        var Peixe_Utilizado = Number(input_peixe_utilizado.value);
+        var Peixe_perdido = Number(input_peixe_utilizado.value);
 
         // Cálculos para verificar se poderá haver prejuízos
-        var qtdPeixes = Estoque - Peixe_Utilizado;
-        var Valor_Prejuizo = qtdPeixes * Valor_Peixe;
-        var Porcent_Peixes = qtdPeixes * (100 / Estoque);
+        // var qtdPeixes = Estoque - Peixe_Utilizado;
+        var Valor_Prejuizo = Peixe_perdido * Valor_Peixe;
+        // var Porcent_Peixes = Math.floor(qtdPeixes * (100 / Estoque));
 
         // Apresentando ao cliente a mensagem caso tenha peixes que não foram vendidos.
-        if (qtdPeixes > 0) {
+        if (Peixe_perdido > 0) {
             //Deixando o fundo da div branco apenas quando chamar o if
             div_retorno.style.backgroundColor = "#ffffff";
 
             div_retorno.innerHTML = `
-        <br><p class="p_titulo_retorno">${Razao_Social}, esse é o <span style="color:red;">possível prejuízo</span> causado por não utilizar nossos serviços: </p><br>
-        ° ${qtdPeixes} Peixes ficaram no estoque. Equivale a ${Porcent_Peixes}% dos peixes que estavam armazenados. <br><br>
+        <br><p class="p_titulo_retorno">${Razao_Social}, esse é o <span style="color:red;"> prejuízo</span> causado por não utilizar nossos serviços: </p><br>
+        ° ${Peixe_perdido} quilos de  ${especie} ficaram no estoque.<br>
         ° R$${Valor_Prejuizo} foram gastos (desperdiçados) nos peixes não utilizados. <br><br>
-
         Com os nossos serviços de monitoramento garantimos que de 10 a 12 dias, em uma temperatura média de 5°C, é o tempo máximo para os peixes serem utilizados.
         `;
         }
 
-        // Apresentando que não haverá lógica pois foi vendido a mais do que tem no estoque.
-        if (qtdPeixes < 0) {
-            alert('Foi digitado que a quantidade de peixes vendidos é maior do que há no estoque! Por Favor digite uma quantidade lógica.')
-        }
+    
+       
 
         // Apresentando que não haverá prejuízos, porque todos os peixes foram vendidos.
-        if (qtdPeixes == 0) {
+        if (Peixe_perdido == 0) {
             alert('Não haverá prejuízos, todos os peixes foram vendidos !')
         }
     }
