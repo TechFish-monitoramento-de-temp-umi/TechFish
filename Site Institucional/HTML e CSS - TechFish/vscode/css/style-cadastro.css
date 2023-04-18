@@ -51,9 +51,9 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     margin:auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 50px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    
     display: flex;
     flex-direction: column;
     text-align: center;
