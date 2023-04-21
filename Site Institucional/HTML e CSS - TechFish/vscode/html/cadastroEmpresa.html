@@ -24,50 +24,53 @@
         </div>
     </div>
     <div class="geral">
-    <div id="cadastro" class="cadastro">
-        <h2 class="titulo">Cadastrar Empresa</h2>
-        <label for="Nome_da_empresa" class="input">Nome da empresa</label>
-        <div class="input">
-            <input id="nome_empresa" name="nome_empresa" type="text">
-            <br><br>
-            <label for="CNPJ">CNPJ</label>
+        <div id="cadastro" class="cadastro">
+            <h2 class="titulo">Cadastrar Empresa</h2>
+            <label for="Nome_da_empresa" class="input">Nome da empresa</label>
             <div class="input">
-                <input id="CNPJ" name="CNPJ" type="number">
+                <input id="nome_empresa" name="nome_empresa" type="text">
+                <br><br>
+                <label for="CNPJ">CNPJ</label>
+                <div class="input">
+                    <input id="CNPJ" name="CNPJ" type="number">
+                </div>
+                <br>
+                <label for="Endereco">Endereço</label>
+                <div class="input">
+                    <input id="Endereco" name="Endereço" type="text">
+                </div>
+                <br>
+                <label for="Telefone">Telefone</label>
+                <div class="input">
+                    <input id="Telefone" name="Telefone" type="number">
+                </div>
+                <br>
+                <label for="Email">Email</label>
+                <div class="input">
+                    <input type="email" id="Email" name="Email" type="text">
+                </div>
+                <br>
+                <label for="senha">Senha</label>
+                <div class="input">
+                    <input type="password" id="Senha" name="senha" type="text" </div>
+                    <br><br>
+                    <label for="senha">Confirmar senha</label>
+                    <div class="input">
+                        <input type="password" id="Senha2" name="senha" type="text" </div>
+                        <br><br>
+                        <button onclick="Cadastrar()" class="botao"><b>Cadastrar</b></button><br><br>
+                        <div id="div_validacao" class="validacao"></div>
+                    </div>
+
+                </div>
             </div>
-            <br>
-            <label for="Endereco">Endereço</label>
-            <div class="input">
-                <input id="Endereco" name="Endereço" type="text">
-            </div>
-            <br>
-            <label for="Telefone">Telefone</label>
-            <div class="input">
-                <input id="Telefone" name="Telefone" type="number">
-            </div>
-            <br>
-            <label for="Email">Email</label>
-            <div class="input">
-                <input type="email" id="Email" name="Email" type="text">
-            </div>
-            <br>
-            <label for="senha">Senha</label>
-            <div class="input">
-                <input type="password" id="Senha" name="senha" type="text"
-            </div>
-            <br><br>
-            <label for="senha">Confirmar senha</label>
-            <div class="input">
-                <input type="password" id="Senha2" name="senha" type="text"
-            </div>
-            <br><br>
-            <button onclick="Cadastrar()" class="botao"><b>Cadastrar</b></button><br><br>
+            
         </div>
-       
     </div>
-    </div>
+
     <div class="rodaPé">
-        
-        <h4 >TechFish</h4> 
+
+        <h4>TechFish</h4>
         <img src="../img/logo.PNG" class="img3">
         <ul class="bula">
             <li class="roda">Inicio</li>
@@ -79,57 +82,57 @@
 
         <ul class="bula">
             <li class="roda">Sobre nós</li>
-          <button onclick="descriçao()" class="botãoroda">Descrição</button>
-          <div id="div_desc"></div>
-          <button onclick="contato()" class="botãoroda">Contato</button>
-          <div id="div_Contato"></div>
-            
-            
+            <button onclick="descriçao()" class="botãoroda">Descrição</button>
+            <div id="div_desc"></div>
+            <button onclick="contato()" class="botãoroda">Contato</button>
+            <div id="div_Contato"></div>
+
+
         </ul>
 
         <ul class="bula">
             <li class="roda">Redes Sociais</li>
-            <li><a href="" class="roda">Instagram</a></li>
+            <li><a href="https://www.instagram.com/techf_ish/" class="roda">Instagram</a></li>
 
         </ul>
-    
-</div>
-    <div id="div_validacao" class="validacao"></div>
+
+    </div>
+
 </body>
 
 </html>
 
 <script>
 
-function Cadastrar(){
+    function Cadastrar() {
 
-var email = Email.value
-var senha = Senha.value
-var confirmar_senha = Senha2.value
-
-
-
- if(email.indexOf('@') < 0 || email.indexOf('.com') < 0){
-
-    div_validacao.innerHTML = `Email invalido <br><br>`
-
-} else if (senha.length <= 7 ){
-
-    div_validacao.innerHTML = `A senha tem que ter no mínino 7 caracteres`
-
-}else if (confirmar_senha != senha){
-
-div_validacao.innerHTML = `Senha incompativel`
+        var email = Email.value
+        var senha = Senha.value
+        var confirmar_senha = Senha2.value
 
 
-}else{
 
-div_validacao.innerHTML = ``
+        if (email.indexOf('@') < 0 || email.indexOf('.com') < 0) {
 
-}
+            div_validacao.innerHTML = `Email invalido <br><br>`
+
+        } else if (senha.length <= 7) {
+
+            div_validacao.innerHTML = `A senha tem que ter no mínino 7 caracteres`
+
+        } else if (confirmar_senha != senha) {
+
+            div_validacao.innerHTML = `Senha incompativel`
 
 
-}
+        } else {
+
+            div_validacao.innerHTML = ``
+
+        }
+
+
+    }
 
 
 </script>
