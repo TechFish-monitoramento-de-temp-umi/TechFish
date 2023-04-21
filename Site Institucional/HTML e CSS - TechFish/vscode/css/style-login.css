@@ -98,3 +98,17 @@ a{
     border-bottom: 3px solid #161515;
     margin-bottom: 20px;
 }
+
+.botao{
+    display: flex;
+    padding: 20px;
+}
+.botao a{
+    background-color: #161515;
+    color: #f29236;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
