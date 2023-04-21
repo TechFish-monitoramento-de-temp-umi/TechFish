@@ -112,3 +112,8 @@ a{
     border-radius: 20px;
     padding: 10px;
 }
+
+.naotemconta a{
+    color: #161515;
+    font-size: large;
+}
