@@ -64,7 +64,7 @@ a{
 
 }
 .cadastro{
-    background-color: #f29236;
+    background-color: rgb(242, 146, 54, 0.9);
     width: 50%;
     margin: auto;
     display: flex;
@@ -86,11 +86,17 @@ input{
     border-radius: 10px;
     border: none;
 }
-button{
+
+.botao{
+    display: flex;
+    padding: 20px;
+}
+.botao a{
     background-color: #161515;
-    color: #e46c00;
-    border: none;
-    width: 80px;
-    height: 25px;
+    color: #f29236;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
     border-radius: 20px;
+    padding: 10px;
 }

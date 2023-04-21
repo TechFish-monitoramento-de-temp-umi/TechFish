@@ -17,7 +17,7 @@
             <img src="../img/logo.PNG">
             <ul class="NavBar">
                 <li><a href="home.html">Home</a></li>
-                <li><a href="">Gráficos</a></li>
+                <li><a href="login.html">Gráficos</a></li>
                 <li><a href="Simulador.html">Simulador</a></li>
                 <li><a href="Cadastro.html">Cadastro</a></li>
                 <li><a href="login.html">Login</a></li>
@@ -66,11 +66,10 @@
         }
 
     
-       
-
-        // Apresentando que não haverá prejuízos, porque todos os peixes foram vendidos.
-        if (Peixe_perdido == 0) {
-            alert('Não haverá prejuízos, todos os peixes foram vendidos !')
+        if ( Razao_Social == "" || especie == "" || Valor_Peixe== ""){
+            alert("Todos os campos devem ser preenchidos")
+        } else if (Peixe_perdido == 0){
+            div_retorno.innerHTML = 'Não haverá prejuízos, todos os peixes foram vendidos !'
         }
     }
 </script>

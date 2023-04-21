@@ -60,7 +60,7 @@
                 <input type="password" id="Senha2" name="senha" type="text"
             </div>
             <br><br>
-            <button onclick="cadastrar()"><b>Cadastrar</b></button><br><br>
+            <button onclick="cadastrar()" class="botao"><b>Cadastrar</b></button><br><br>
         </div>
        
     </div>
@@ -76,6 +76,8 @@ function cadastrar(){
 var email = Email.value
 var senha = Senha.value
 var confirmar_senha = Senha2.value
+
+
 
  if(email.indexOf('@') < 0 || email.indexOf('.com') < 0){
 

@@ -61,7 +61,7 @@ a{
     width: 30%;
     height: 400px;
     display: flex;
-    background-color: #F29236;
+    background-color: rgb(242, 146, 54, 0.9);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -97,4 +97,23 @@ a{
 .caixa-login h2{
     border-bottom: 3px solid #161515;
     margin-bottom: 20px;
+}
+
+.botao{
+    display: flex;
+    padding: 20px;
+}
+.botao a{
+    background-color: #161515;
+    color: #f29236;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.naotemconta a{
+    color: #161515;
+    font-size: large;
 }
