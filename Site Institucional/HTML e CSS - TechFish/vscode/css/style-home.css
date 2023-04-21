@@ -60,7 +60,7 @@ a{
     background-position: auto;
     display: flex;
     background-color: #16161698;
-    padding: 100px;
+    padding: 45px;
  }
 .recepcao{
     display: flex;
@@ -96,7 +96,7 @@ a{
     flex-direction: column;
     background-color: #16161698;
     padding-bottom: 30px;
-    border: #f29236 solid 3px;
+    border-top: #f29236 solid 3px;
 }
 .container-cont{
     display: flex;
@@ -146,7 +146,8 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     margin: auto;
-    border: #e46c00 3px solid;
+    border-top: #e46c00 3px solid;
+    border-bottom: #e46c00 3px solid;
     padding: 60px;
     justify-content: space-around;
     flex-direction: column;
