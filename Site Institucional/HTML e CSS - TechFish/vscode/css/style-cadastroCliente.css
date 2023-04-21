@@ -87,28 +87,25 @@ input{
     border: none;
 }
 
-.botao{
-    display: flex;
-    padding: 20px;
-}
-.botao a{
+.botao {
     background-color: #161515;
-    color: #f29236;
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
+    color: #e46c00;
+    border: none;
+    width: 80px;
+    height: 25px;
     border-radius: 20px;
-    padding: 10px;
+    margin-top: 10px;
 }
 .rodaPé {
     background-position: start;
     display: flex;
          height: 120px;
         width: 100%;
-        background-color: #e46c00;
-        color: #fff;
+        background-color: black;
+        color: #e46c00;
         text-align: center;
         justify-content: space-evenly;
+        border-top: #e46c00 4px solid;
 }
 
 .rodaPé h4{
@@ -132,7 +129,7 @@ input{
   .roda {
     width: 400px;
     display: flex;
-    color: white;
+    color: #e46c00;
     list-style: none;
     
   }
@@ -146,9 +143,9 @@ input{
     }
 
     .botãoroda {
-        background-color: #e46c00;
+        background-color: black;
         display: flex;
-        color: white;
+        color: #e46c00;
         border: none;
         width: 400px;
         text-align: center;

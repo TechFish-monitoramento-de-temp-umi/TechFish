@@ -182,8 +182,8 @@ a{
     display: flex;
          height: 120px;
         width: 100%;
-        background-color: #e46c00;
-        color: #fff;
+        background-color: black;
+        color:  rgb(242, 146, 54);
         text-align: center;
         justify-content: space-evenly;
 }
@@ -209,7 +209,7 @@ a{
   .roda {
     width: 400px;
     display: flex;
-    color: white;
+    color: rgb(242, 146, 54) ;
     list-style: none;
     
   }
@@ -223,9 +223,9 @@ a{
     }
 
     .botãoroda {
-        background-color: #e46c00;
+        background-color: black;
         display: flex;
-        color: white;
+        color: #e46c00;
         border: none;
         width: 400px;
         text-align: center;

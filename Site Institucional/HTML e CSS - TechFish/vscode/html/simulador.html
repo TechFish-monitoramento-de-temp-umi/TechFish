@@ -24,51 +24,52 @@
             </ul>
         </div>
     </div>
-        <div class="geral">
-            <div class="calculadora">
-                <h1>Simulador Financeiro</h1>
-                <p>Razão Social:<input id="input_Razao_Social" type="text"></p>
-                <p>Insira a espécie do peixe:<input id="id_especie"> </p>
-                <p>Custo do quilo do peixe <input id="input_valor_peixe" type="number"></p>
-                <p>Total de quilos perdidos no mês: <input id="input_peixe_utilizado" type="number"></p>
-                <button onclick="Calcular()">Calcular</button>
-            </div>
-            <div id="div_retorno" class="div-retorno">
-                Ao clicar em calcular, os dados analisados aparecerão aqui!
-            </div>
+    <div class="geral">
+        <div class="calculadora">
+            <h1>Simulador Financeiro</h1>
+            <p>Razão Social:<input id="input_Razao_Social" type="text"></p>
+            <p>Insira a espécie do peixe:<input id="id_especie"> </p>
+            <p>Custo do quilo do peixe <input id="input_valor_peixe" type="number"></p>
+            <p>Total de quilos perdidos no mês: <input id="input_peixe_utilizado" type="number"></p>
+            <button onclick="Calcular()">Calcular</button>
         </div>
-        <div class="rodaPé">
-        
-            <h4 >TechFish</h4> 
-            <img src="../img/logo.PNG" class="img3">
-            <ul class="bula">
-                <li class="roda">Inicio</li>
-                <li><a href="home.html" class="roda">Home</a></li>
-                <li><a href="Simulador.html" class="roda">Simulador</a></li>
-                <li><a href="Cadastro.html" class="roda">Cadastro</a></li>
-                <li><a href="login.html" class="roda">Login</a></li>
-            </ul>
+        <div id="div_retorno" class="div-retorno">
+            Ao clicar em calcular, os dados analisados aparecerão aqui!
+        </div>
+    </div>
+    <div class="rodaPé">
 
-            <ul class="bula">
-                <li class="roda">Sobre nós</li>
-              <button onclick="descriçao()" class="botãoroda">Descrição</button>
-              <div id="div_desc"></div>
-              <button onclick="contato()" class="botãoroda">Contato</button>
-              <div id="div_Contato"></div>
-                
-                
-            </ul>
+        <h4>TechFish</h4>
+        <img src="../img/logo.PNG" class="img3">
+        <ul class="bula">
+            <li class="roda">Inicio</li>
+            <li><a href="home.html" class="roda">Home</a></li>
+            <li><a href="Simulador.html" class="roda">Simulador</a></li>
+            <li><a href="Cadastro.html" class="roda">Cadastro</a></li>
+            <li><a href="login.html" class="roda">Login</a></li>
+        </ul>
 
-            <ul class="bula">
-                <li class="roda">Redes Sociais</li>
-                <li><a href="" class="roda">Instagram</a></li>
-                
-            </ul>
+        <ul class="bula">
+            <li class="roda">Sobre nós</li>
+            <button onclick="descriçao()" class="botãoroda">Descrição</button>
+            <div id="div_desc"></div>
+            <button onclick="contato()" class="botãoroda">Contato</button>
+            <div id="div_Contato"></div>
 
 
-        
+        </ul>
+
+        <ul class="bula">
+            <li class="roda">Redes Sociais</li>
+            <li><a href="" class="roda">Instagram</a></li>
+
+        </ul>
+
+
+
     </div>
 </body>
+
 </html>
 
 <script>
@@ -96,11 +97,20 @@
         `;
         }
 
-    
-        if ( Razao_Social == "" || especie == "" || Valor_Peixe== ""){
+
+        if (Razao_Social == "" || especie == "" || Valor_Peixe == "") {
             alert("Todos os campos devem ser preenchidos")
-        } else if (Peixe_perdido == 0){
+        } else if (Peixe_perdido == 0) {
             div_retorno.innerHTML = 'Não haverá prejuízos, todos os peixes foram vendidos !'
         }
     }
+
+    function descriçao() {
+        div_desc.innerHTML = 'Somos uma empresa de monitoramento de temperatura e umidade do seu restaurante de culinária japonesa '
+    }
+
+    function contato() {
+        div_Contato.innerHTML = `Email: TechFish@gmail.com <br> telefone: (11) 97501-2301 `
+    }
+
 </script>

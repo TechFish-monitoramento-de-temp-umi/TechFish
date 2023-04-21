@@ -17,7 +17,7 @@
             <img src="../img/logo.PNG">
             <ul class="NavBar">
                 <li><a href="home.html">Home</a></li>
-                <li><a href="">Gráficos</a></li>
+                <li><a href="login.html">Gráficos</a></li>
                 <li><a href="Simulador.html">Simulador</a></li>
                 <li><a href="Cadastro.html">Cadastro</a></li>
                 <li><a href="login.html">Login</a></li>
@@ -34,19 +34,18 @@
                 <div class="naotemconta">
                     <a href="cadastro.html">Não tem conta ainda? Cadastrar</a>
 
+
                 </div>
-                <div class="botao">
-                    <a href="home.html">Entrar</a>
-                </div>
+                <button onclick="Entrar()">Entrar</button> <br>
+                <div id="div_validacao" class="validacao"></div>
             </div>
-            <div id="div_validacao" class="validacao"></div>
         </div>
     </div>
     </div>
     </div>
     <div class="rodaPé">
-        
-        <h4 >TechFish</h4> 
+
+        <h4>TechFish</h4>
         <img src="../img/logo.PNG" class="img3">
         <ul class="bula">
             <li class="roda">Inicio</li>
@@ -58,48 +57,64 @@
 
         <ul class="bula">
             <li class="roda">Sobre nós</li>
-          <button onclick="descriçao()" class="botãoroda">Descrição</button>
-          <div id="div_desc"></div>
-          <button onclick="contato()" class="botãoroda">Contato</button>
-          <div id="div_Contato"></div>
-            
-            
+            <button onclick="descriçao()" class="botãoroda">Descrição</button>
+            <div id="div_desc"></div>
+            <button onclick="contato()" class="botãoroda">Contato</button>
+            <div id="div_Contato"></div>
+
+
         </ul>
 
         <ul class="bula">
             <li class="roda">Redes Sociais</li>
             <li><a href="" class="roda">Instagram</a></li>
-            
+
         </ul>
 
 
-    
-</div>
+
+    </div>
 </body>
 
 </html>
 
 <script>
+    function Entrar() {
 
-function Cadastrar(){
+        var email = input_email.value
+        var senha = input_senha.value
 
-var email = input_email.value
-var senha = input_senha.value
 
- if(email.indexOf('@') < 0 || email.indexOf('.com') < 0){
 
-    div_validacao.innerHTML = `Email invalido <br><br>`
 
-} else if (senha.length <= 7 ){
+        if (email.indexOf('@') < 0 || email.indexOf('.com') < 0) {
 
-    div_validacao.innerHTML = `A senha tem que ter no mínino 7 caracteres`
+            div_validacao.innerHTML = `Email invalido <br><br>`
 
-}else{
+        } else if (senha.length < 7) {
 
-div_validacao.innerHTML = ``
+            div_validacao.innerHTML = `Senha inválida`
 
-}
+        } else {
+            setTimeout(() => {
+                window.location = "home.html";
+            }, "0000")
+            div_validacao.innerHTML = ``
 
-}
+        }
+
+
+    }
+
+    function descriçao() {
+        div_desc.innerHTML = 'Somos uma empresa de monitoramento de temperatura e umidade do seu restaurante de culinária japonesa '
+    }
+
+    function contato() {
+        div_Contato.innerHTML = `Email: TechFish@gmail.com <br> telefone: (11) 97501-2301 `
+    }
+
+
+
 
 </script>
