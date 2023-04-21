@@ -39,6 +39,7 @@
                     <a href="home.html">Entrar</a>
                 </div>
             </div>
+            <div id="div_validacao" class="validacao"></div>
         </div>
     </div>
     </div>
@@ -46,3 +47,28 @@
 </body>
 
 </html>
+
+<script>
+
+function Cadastrar(){
+
+var email = input_email.value
+var senha = input_senha.value
+
+ if(email.indexOf('@') < 0 || email.indexOf('.com') < 0){
+
+    div_validacao.innerHTML = `Email invalido <br><br>`
+
+} else if (senha.length <= 7 ){
+
+    div_validacao.innerHTML = `A senha tem que ter no mínino 7 caracteres`
+
+}else{
+
+div_validacao.innerHTML = ``
+
+}
+
+}
+
+</script>

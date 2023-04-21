@@ -89,13 +89,27 @@ input{
 
 .botao{
     display: flex;
-    padding: 20px;
+    padding: 10px;
 }
-.botao a{
+.botao{
     background-color: #161515;
     color: #f29236;
     display: flex;
     justify-content: space-around;
-    margin: 20px;
+    margin: 30px;
     border-radius: 20px;
+}
+
+.validacao{
+    
+background-color: #f29236;
+border-radius: 10px;
+border: #161515;
+display: flex;
+justify-content: end;
+align-items: flex-start;
+
+
+
+
 }
