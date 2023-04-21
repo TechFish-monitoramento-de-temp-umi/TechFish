@@ -16,7 +16,7 @@
             <img src="../img/logo.PNG">
             <ul class="NavBar">
                 <li><a href="home.html">Home</a></li>
-                <li><a href="login.html">Gráficos</a></li>
+                <li><a href="">Gráficos</a></li>
                 <li><a href="Simulador.html">Simulador</a></li>
                 <li><a href="Cadastro.html">Cadastro</a></li>
                 <li><a href="login.html">Login</a></li>
@@ -47,7 +47,7 @@
             <br>
             <label for="Email">Email</label>
             <div class="input">
-                <input id="Email" name="Email" type="text">
+                <input type="email" id="Email" name="Email" type="text">
             </div>
             <br>
             <label for="senha">Senha</label>
@@ -57,14 +57,14 @@
             <br><br>
             <label for="senha">Confirmar senha</label>
             <div class="input">
-                <input type="password" id="Senha" name="senha" type="text"
+                <input type="password" id="Senha2" name="senha" type="text"
             </div>
             <br><br>
-            <div class="botao">
-                <a href="login.html">Cadastrar</a>
-            </div>
+            <button onclick="cadastrar()" class="botao"><b>Cadastrar</b></button><br><br>
         </div>
+       
     </div>
+<<<<<<< HEAD
     </div>
     <div class="rodaPé">
         
@@ -97,15 +97,44 @@
 
     
 </div>
+=======
+    <div id="div_validacao" class="validacao"></div>
+>>>>>>> c77dd1d169dd88f9378d4f91dcb0c3e689f56832
 </body>
 
 </html>
 
 <script>
 
+function cadastrar(){
+
+var email = Email.value
+var senha = Senha.value
+var confirmar_senha = Senha2.value
 
 
 
+ if(email.indexOf('@') < 0 || email.indexOf('.com') < 0){
+
+    div_validacao.innerHTML = `Email invalido <br><br>`
+
+} else if (senha.length <= 7 ){
+
+    div_validacao.innerHTML = `A senha tem que ter no mínino 7 caracteres`
+
+}else if (confirmar_senha != senha){
+
+div_validacao.innerHTML = `Senha incompativel`
+
+
+}else{
+
+div_validacao.innerHTML = ``
+
+}
+
+
+}
 
 
 </script>
