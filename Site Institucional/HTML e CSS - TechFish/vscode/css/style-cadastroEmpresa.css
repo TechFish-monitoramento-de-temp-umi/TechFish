@@ -1,53 +1,62 @@
-*{
+* {
     font-family: monospace;
 }
-body{
+
+body {
     background-image: linear-gradient(#e6e6e6, #a7a7a7);
     background-attachment: fixed;
     margin: 0;
 }
-.container-header{
+
+.container-header {
     display: flex;
     width: 90%;
     margin: auto;
 }
-.header{
+
+.header {
     width: 100%;
     background-color: #161515;
     border-bottom: #e46c00 4px solid;
     padding-top: 15px;
     padding-bottom: 15px;
 }
-.header .container-header{
+
+.header .container-header {
     justify-content: space-between;
     align-items: center;
 }
-.header img{
+
+.header img {
     width: 140px;
     height: 100px;
     border-radius: 120px;
 }
-.NavBar{
+
+.NavBar {
     width: 400px;
     display: flex;
     color: #e46c00;
     list-style: none;
-    justify-content: space-evenly;  
+    justify-content: space-evenly;
 }
-a{
+
+a {
     text-decoration: none;
     color: #e46c00;
 }
-.header a{
+
+.header a {
     background-color: #161515;
     padding: 5px;
     border-radius: 5px;
     border: #e46c00 2px solid;
     font-size: larger;
 }
-.geral{
+
+.geral {
     background-color: #16151596;
-    background-image:url(../img/peixe0.jpg);
+    background-image: url(../img/peixe0.jpg);
     background-position: auto;
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,7 +64,8 @@ a{
     flex-direction: column;
     margin: auto;
 }
-.titulo{
+
+.titulo {
     color: #f29236;
     font-size: xx-large;
     background-color: #161515;
@@ -63,7 +73,8 @@ a{
     padding: 10px;
 
 }
-.cadastro{
+
+.cadastro {
     background-color: #f29236;
     width: 50%;
     margin: auto;
@@ -78,17 +89,19 @@ a{
     border: #161515 4px solid;
     border-radius: 30px;
 }
-.input{
+
+.input {
     color: #161515;
     font-size: large;
 }
-input{
+
+input {
     border-radius: 10px;
     border: none;
 }
 
 
-.botao{
+.botao {
     background-color: #161515;
     color: #e46c00;
     border: none;
@@ -102,17 +115,17 @@ input{
 .rodaPé {
     background-position: start;
     display: flex;
-         height: 120px;
-        width: 100%;
-        background-color: black;
-        color: #e46c00;
-        text-align: center;
-        justify-content: space-evenly;
-        border-top: #e46c00 4px solid;
+    height: 120px;
+    width: 100%;
+    background-color: black;
+    color: #e46c00;
+    text-align: center;
+    justify-content: space-evenly;
+    border-top: #e46c00 4px solid;
 }
 
-.rodaPé h4{
-    text-align: center; 
+.rodaPé h4 {
+    text-align: center;
 
 }
 
@@ -123,34 +136,41 @@ input{
     flex-direction: column;
     height: 100px;
     margin: 0;
-    
-  }
 
-  .roda {
-    width: 400px;
+}
+
+.roda {
+    width: 100%;
     display: flex;
     color: #e46c00;
     list-style: none;
-    
-  }
 
-    .img3 {
-        width: 140px;
-        height: 100px;
-        border-radius: 120px;
-        margin-left: 10%;
-        margin-top: 10px;
-    }
+}
 
-    .botãoroda {
-        background-color: black;
-        display: flex;
-        color: #e46c00;
-        border: none;
-        width: 400px;
-        text-align: center;
-        
+.img3 {
+    width: 140px;
+    height: 100px;
+    border-radius: 120px;
+    margin-left: -30%;
+    margin-top: 10px;
+}
 
+.botãoroda {
+    background-color: black;
+    display: flex;
+    color: #e46c00;
+    border: none;
+    width: 100px;
+    text-align: center;
 
-        }
+}
 
+.validacao {
+    width: 100%;
+    height: 10%;
+    border: #161515 2px;
+    color: #a80505;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+
+}

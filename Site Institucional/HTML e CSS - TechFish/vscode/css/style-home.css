@@ -52,7 +52,7 @@ a{
     justify-content: center;
 }
 .intro{
-    width: 187.5vh;
+    width: 201.5vh;
     background-image:url(../img/rest2.jpg);
     background-position: auto;
     background-repeat: no-repeat;
@@ -208,7 +208,7 @@ a{
   }
 
   .roda {
-    width: 400px;
+    width: 100px;
     display: flex;
     color: rgb(242, 146, 54) ;
     list-style: none;
@@ -219,7 +219,7 @@ a{
         width: 140px;
         height: 100px;
         border-radius: 120px;
-        margin-left: 10%;
+        margin-left: -15%;
         margin-top: 10px;
     }
 

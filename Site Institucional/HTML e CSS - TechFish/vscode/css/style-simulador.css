@@ -140,7 +140,7 @@ a{
   }
 
   .roda {
-    width: 400px;
+    width: 100px;
     display: flex;
     color: #e46c00;
     list-style: none;
@@ -151,7 +151,7 @@ a{
         width: 140px;
         height: 100px;
         border-radius: 120px;
-        margin-left: 10%;
+        margin-left: -15%;
         margin-top: 10px;
     }
 
