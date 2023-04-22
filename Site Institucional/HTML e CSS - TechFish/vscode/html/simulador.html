@@ -31,7 +31,8 @@
             <p>Insira a espécie do peixe:<input id="id_especie"> </p>
             <p>Custo do quilo do peixe <input id="input_valor_peixe" type="number"></p>
             <p>Total de quilos perdidos no mês: <input id="input_peixe_utilizado" type="number"></p>
-            <button onclick="Calcular()">Calcular</button>
+            <button onclick="Calcular()">Calcular</button> <br>
+            <div id="div_mensagemcampo"></div>
         </div>
         <div id="div_retorno" class="div-retorno">
             Ao clicar em calcular, os dados analisados aparecerão aqui!
@@ -39,7 +40,7 @@
     </div>
     <div class="rodaPé">
 
-        <h4>TechFish</h4>
+        <h4></h4>
         <img src="../img/logo.PNG" class="img3">
         <ul class="bula">
             <li class="roda">Inicio</li>
@@ -99,7 +100,7 @@
 
 
         if (Razao_Social == "" || especie == "" || Valor_Peixe == "") {
-            alert("Todos os campos devem ser preenchidos")
+            div_mensagemcampo.innerHTML = "Todos os campos devem ser preenchidos"
         } else if (Peixe_perdido == 0) {
             div_retorno.innerHTML = 'Não haverá prejuízos, todos os peixes foram vendidos !'
         }
