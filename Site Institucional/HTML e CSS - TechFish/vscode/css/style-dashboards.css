@@ -1,0 +1,182 @@
+* {
+    font-family: monospace;
+}
+
+/* INICIO DO HEADER */
+body {
+    background-image: linear-gradient(#e6e6e6, #a7a7a7);
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.container-header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.header {
+    width: 100%;
+    background-color: #161515;
+    border-bottom: #e46c00 4px solid;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.header .container-header {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img {
+    width: 140px;
+    height: 100px;
+    border-radius: 120px;
+}
+
+.NavBar {
+    width: 400px;
+    display: flex;
+    color: #e46c00;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    color: #e46c00;
+}
+
+.header a {
+    background-color: #161515;
+    padding: 5px;
+    border-radius: 5px;
+    border: #e46c00 2px solid;
+    font-size: larger;
+}
+/* FIM DO HEADER */
+
+/* INICIO DOS DASHBOARDS */
+.container-dash {
+    display:flex;
+    width: 90%;
+    margin:auto;
+    flex-direction: column;
+}
+
+.dashboards {
+    display: flex;
+    height: auto;
+    width: 100%;
+    background-image: url(../img/rest11.jpg);
+    background-position: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #16161698;
+    padding: 45px;
+}
+
+.dash-temp {
+    display: flex;
+}
+
+.dash-umid{
+    display: flex;
+}
+
+.card {
+    background-color: #FF914D;
+    width: 500px;
+    height: 400px;
+    border-radius: 30px;
+    border: #161515 4px solid;
+    justify-content: space-evenly;
+    margin-left: 5px;
+}
+
+.card-menor {
+    width: 500px;
+    height: 400px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+}
+
+.vazio {
+    width: 50px;
+    height: 50px;
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+    background-color: #FF914D;
+    border-radius: 30px;
+    border: #161515 4px solid;
+    height: 150px;
+    width: 400px;
+    font-size: larger;
+    text-align: center;
+    justify-content: center;
+}
+
+.card img{
+    height: 350px;
+    width: 450px;
+    border-radius: 30px;
+}
+
+.texto{
+    justify-content: start;
+}
+
+.numero {
+    display: flex;
+    font-size: 50px;
+    font-style: oblique;
+    text-align: center;
+    justify-content: center;
+}
+/* FIM DOS DASHBOARDS  */
+
+/* INICIO DO RODAPÉ */
+.rodaPé {
+    background-position: start;
+    display: flex;
+    height: 120px;
+    width: 100%;
+    background-color: black;
+    color: #e46c00;
+    text-align: center;
+    justify-content: space-evenly;
+    border-top: #e46c00 4px solid;
+}
+
+.rodaPé h4 {
+    text-align: center;
+}
+
+.roda {
+    width: 400px;
+    display: flex;
+    color: #e46c00;
+    list-style: none;
+}
+
+.img3 {
+    width: 140px;
+    height: 100px;
+    border-radius: 120px;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+.botãoroda {
+    background-color: black;
+    display: flex;
+    color: #e46c00;
+    border: none;
+    width: 400px;
+    text-align: center;
+}
+/* FIM DO RODAPÉ */

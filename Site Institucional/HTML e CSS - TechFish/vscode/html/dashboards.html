@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graficos - TechFish</title>
+    <link rel="stylesheet" href="../css/style-dashboards.css">
+    <link rel="shortcut icon" href="../img/logo.PNG" type="image/x-icon">
+</head>
+
+<body>
+    <!-- INICIO DO HEADER -->
+    <div class="header">
+        <div class="container-header">
+            <img src="../img/logo.PNG">
+            <ul class="NavBar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dashboards.html">Gráficos</a></li>
+                <li><a href="Simulador.html">Simulador</a></li>
+                <li><a href="Cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- FIM DO HEADER -->
+
+    <!-- INICIO DOS DASHBOARDS -->
+    <div class="dashboards">
+        <div class="container-dash">
+            <div class="dash-temp">
+                <div class="card">
+                    <img src="../img/grafico temp.jpg">
+                </div>
+                <div class="card-menor">
+                    <div class="dados"><span class="texto">Temperatura Predominante:</span><br><span class="numero">-17,6°C</span></div>
+                    <div class="dados"><span class="texto">Temperatura Ambiente 1:</span><br><span class="numero">-18°C</span></div>
+                    <div class="dados"><span class="texto">Temperatura Ambiente 2:</span><br><span class="numero">-17,1°C</span></div>
+                </div>
+            </div>
+            <div class="vazio"></div>
+            <div class="dash-umid">
+                <div class="card">
+                    <img src="../img/grafico_umid.png">
+                </div>
+                <div class="card-menor">
+                    <div class="dados"><span class="texto">Umidade Predominante:</span><br><span class="numero">2,3%</span></div>
+                    <div class="dados"><span class="texto">Umidade Ambiente 1:</span><br><span class="numero">2,2°C</span></div>
+                    <div class="dados"><span class="texto">Umidade Ambiente 2:</span><br><span class="numero">-2,4°C</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIM DOS DASHBOARDS -->
+
+    <!-- INICIO DO RODAPÉ -->
+    <div class="rodaPé">
+
+        <h4>TechFish</h4>
+        <img src="../img/logo.PNG" class="img3">
+        <ul class="bula">
+            <li class="roda">Inicio</li>
+            <li><a href="home.html" class="roda">Home</a></li>
+            <li><a href="Simulador.html" class="roda">Simulador</a></li>
+            <li><a href="Cadastro.html" class="roda">Cadastro</a></li>
+            <li><a href="login.html" class="roda">Login</a></li>
+        </ul>
+
+        <ul class="bula">
+            <li class="roda">Sobre nós</li>
+            <button onclick="descriçao()" class="botãoroda">Descrição</button>
+            <div id="div_desc"></div>
+            <button onclick="contato()" class="botãoroda">Contato</button>
+            <div id="div_Contato"></div>
+        </ul>
+
+        <ul class="bula">
+            <li class="roda">Redes Sociais</li>
+            <li><a href="https://www.instagram.com/techf_ish/" class="roda">Instagram</a></li>
+
+        </ul>
+
+    </div>
+    <!-- FIM DO RODAPÉ -->
+
+    <body>
+
+</html>
+
+<script>
+    function descriçao() {
+        div_desc.innerHTML = 'Somos uma empresa de monitoramento de temperatura e umidade do seu restaurante de culinária japonesa '
+    }
+
+    function contato() {
+        div_Contato.innerHTML = `Email: TechFish@gmail.com <br> telefone: (11) 97501-2301 `
+    }
+
+</script>
