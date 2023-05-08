@@ -5,82 +5,59 @@
 /*
 comandos para mysql - banco local - ambiente de desenvolvimento
 */
+create database TechFish;
+use TechFish;
 
-CREATE DATABASE aquatech;
-
-USE aquatech;
-
-CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
+create table Empresa(
+	idEmpresa int primary key auto_increment,
+    Nome varchar(50),
+    CNPJ char(14),
+    Rua varchar(50),
+    Numero varchar(5),
+    Cidade varchar(45),
+    CEP varchar(9),
+    Responsável varchar(45),
+    email_responsavel varchar(50),
+    telefone_responsavel varchar(11)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+create table Usuario(
+	idUsuario int auto_increment,
+    Nome varchar(50),
+    email varchar(50),
+    senha varchar(20),
+    fkEmpresa int,
+    constraint fkEmpresa foreign key (fkEmpresa) references Empresa(idEmpresa),
+    constraint pkComp primary key (idUsuario, fkEmpresa)
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300)
+create table Localizacao(
+	idLocalizacao int auto_increment primary key,
+    Localizacao varchar(30),
+    fkEmpresa int, 
+    constraint fkEmpresa2 foreign key (fkEmpresa) references Empresa(idEmpresa)
 );
 
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
-
-create table medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
+create table Sensores(
+	idSensores int auto_increment primary key,
+    Modelo varchar(30),
+	Temp_min float,
+    Temp_max float,
+    Umi_min float,
+    Umi_max float,
+    fkLocal int,
+    constraint fkLocal foreign key (fkLocal) references Localizacao(idLocalizacao)
 );
 
-
-/*
-comando para sql server - banco remoto - ambiente de produção
-*/
-
-CREATE TABLE usuario (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
-);
-
-CREATE TABLE aviso (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT FOREIGN KEY REFERENCES usuario(id)
-);
-
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY IDENTITY(1,1),
-	descricao VARCHAR(300)
-);
-
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
-
-CREATE TABLE medida (
-	id INT PRIMARY KEY IDENTITY(1,1),
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT FOREIGN KEY REFERENCES aquario(id)
+create table Leitura(
+	idLeitura int auto_increment,
+    dtHora_leitura datetime,
+    tempDHT11 float,
+    tempLM35 float,
+    umidade float,
+    fkSensores int,
+    constraint fkSensores foreign key (fkSensores) references Sensores(idSensores),
+    constraint pkComp4 primary key (idLeitura, fkSensores)
 );
 
 /*
