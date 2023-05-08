@@ -5,34 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Techfish</title>
-    <link rel="stylesheet" href="../css/style-cadastro.css">
-    <link rel="shortcut icon" href="../img/logo.PNG" type="image/x-icon">
+    <title>graficos - TechFish</title>
+    <link rel="stylesheet" href="css/style-dashboards.css">
+    <link rel="shortcut icon" href="img/logo.PNG" type="image/x-icon">
 </head>
 
 <body>
+    <!-- INICIO DO HEADER -->
     <div class="header">
         <div class="container-header">
-            <img src="../img/logo.PNG">
+            <img src="img/logo.PNG">
             <ul class="NavBar">
                 <li><a href="home.html">Home</a></li>
-                <li><a href="login.html">Gráficos</a></li>
+                <li><a href="dashboards.html">Gráficos</a></li>
                 <li><a href="Simulador.html">Simulador</a></li>
                 <li><a href="Cadastro.html">Cadastro</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
         </div>
     </div>
-    <div class="geral">
-        <div class="opcao">
-            <h3>Escolha se deseja realizar o cadastro de sua empresa ou de um funcionário de sua empresa</h3>
-            <span>Clique abaixo na opção desejada e realize o cadastro. O login será realizado na aba "Login"</span>
-        </div>
-        <div class="botao">
-            <a href="cadastroEmpresa.html">Cadastrar minha empresa</a>
-            <a href="cadastroCliente.html">Cadastrar meu funcionário</a>
+    <!-- FIM DO HEADER -->
+
+    <!-- INICIO DOS DASHBOARDS -->
+    <div class="dashboards">
+        <div class="container-dash">
+            <div class="dash-temp">
+                <div class="card">
+                    <img src="../img/grafico temp.jpg">
+                </div>
+                <div class="card-menor">
+                    <div class="dados"><span class="texto">Temperatura Predominante:</span><br><span class="numero">-17,6°C</span></div>
+                    <div class="dados"><span class="texto">Temperatura Ambiente 1:</span><br><span class="numero">-18°C</span></div>
+                    <div class="dados"><span class="texto">Temperatura Ambiente 2:</span><br><span class="numero">-17,1°C</span></div>
+                </div>
+            </div>
+            <div class="vazio"></div>
+            <div class="dash-umid">
+                <div class="card">
+                    <img src="../img/grafico_umid.png">
+                </div>
+                <div class="card-menor">
+                    <div class="dados"><span class="texto">Umidade Predominante:</span><br><span class="numero">2,3%</span></div>
+                    <div class="dados"><span class="texto">Umidade Ambiente 1:</span><br><span class="numero">2,2%</span></div>
+                    <div class="dados"><span class="texto">Umidade Ambiente 2:</span><br><span class="numero">-2,4%</span></div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- FIM DOS DASHBOARDS -->
+
+    <!-- INICIO DO RODAPÉ -->
     <div class="rodaPé">
 
         <h4></h4>
@@ -51,8 +74,6 @@
             <div id="div_desc"></div>
             <button onclick="contato()" class="botãoroda">Contato</button>
             <div id="div_Contato"></div>
-
-
         </ul>
 
         <ul class="bula">
@@ -61,10 +82,12 @@
 
         </ul>
 
-
-
     </div>
-</body>
+    <!-- FIM DO RODAPÉ -->
+
+    <body>
+
+</html>
 
 <script>
     function descriçao() {
