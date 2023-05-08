@@ -1,93 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AquaTech | Login</title>
-
-    <script src="./js/funcoes.js"></script>
-
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <title>Site TechFish - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/style-login.css">
+    <link rel="shortcut icon" href="img/logo.PNG" type="image/x-icon">
 </head>
 
 <body>
-
-    <!--Header-->
-
     <div class="header">
-        <div class="container">
-            <h1 class="titulo">AquaTech</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="index.html">Inicial</a>
-                </li>
-                <li>
-                    <a href="simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li class="agora">
-                    <a href="#">Login</a>
-                </li>
-                <li>
-                    <a href="cadastro.html">Cadastro</a>
-                </li>
+        <div class="container-header">
+            <img src="img/logo.PNG">
+            <ul class="NavBar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="login-tech.html">Gráficos</a></li>
+                <li><a href="Simulador.html">Simulador</a></li>
+                <li><a href="Home-cadastro.html">Cadastro</a></li>
+                <li><a href="login-tech.html">Login</a></li>
             </ul>
         </div>
     </div>
-
-
-    <div class="login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card card-login">
-                <h2>Olá de volta!</h2>
-                <div class="formulario">
-                    <div class="campo">
-                        <span>E-mail:</span>
-                        <input id="email_input" type="text" placeholder="Login">
-                    </div>
-                    <div class="campo">
-                        <span>Senha:</span>
-                        <input id="senha_input" type="text" placeholder="******">
-                    </div>
-                    <button class="botao" onclick="entrar()">Entrar</button>
+    <div class="banner">
+        <div class="container2">
+            <div class="caixa-login">
+                <h1>Login</h1>
+                <h2>Seja bem-vindo novamente!</h2>
+                <p>Email: <input id="input_email" type="text"></p>
+                <p>Senha: <input id="input_senha" type="password"></p>
+                <div class="naotemconta">
+                    <a href="cadastro.html">Não tem conta ainda? Cadastrar</a>
+                </div><br><br>
+                <button onclick="Entrar()">Entrar</button><br>
+                <div class="validacao">
+                    <div id="div_validacao"></div>
                 </div>
-
                 <div id="div_aguardar" class="loading-div">
                     <img src="./assets/circle-loading.gif" id="loading-gif">
                 </div>
-
-                <div id="div_erros_login"></div>
             </div>
         </div>
     </div>
+    </div>
+    </div>
+    <div class="rodaPé">
 
-    
+        <h4></h4>
+        <img src="img/logo.PNG" class="img3">
+        <ul class="bula">
+            <li class="roda">Inicio</li>
+            <li><a href="home.html" class="roda">Home</a></li>
+            <li><a href="Simulador.html" class="roda">Simulador</a></li>
+            <li><a href="Cadastro.html" class="roda">Cadastro</a></li>
+            <li><a href="login.html" class="roda">Login</a></li>
+        </ul>
 
+        <ul class="bula">
+            <li class="roda">Sobre nós</li>
+            <button onclick="descriçao()" class="botãoroda">Descrição</button>
+            <div id="div_desc"></div>
+            <button onclick="contato()" class="botãoroda">Contato</button>
+            <div id="div_Contato"></div>
+
+
+        </ul>
+
+        <ul class="bula">
+            <li class="roda">Redes Sociais</li>
+            <li><a href="https://www.instagram.com/techf_ish/" class="roda">Instagram</a></li>
+
+        </ul>
+
+
+
+    </div>
 </body>
 
 </html>
 
 <script>
-
-
-    function entrar() {
+    function Entrar() {
         aguardar();
 
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
@@ -151,5 +150,6 @@
     function sumirMensagem() {
         cardErro.style.display = "none"
     }
+
 
 </script>
