@@ -24,6 +24,7 @@ create table Empresa(
 create table Usuario(
 	idUsuario int auto_increment,
     Nome varchar(50),
+    telefone varchar(11),
     email varchar(50),
     senha varchar(20),
     fkEmpresa int,

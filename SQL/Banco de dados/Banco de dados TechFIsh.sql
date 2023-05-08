@@ -24,6 +24,9 @@ create table Usuario(
     constraint pkComp primary key (idUsuario, fkEmpresa)
 );
 
+alter table Usuario add column telefone varchar(11);
+
+
 create table Localizacao(
 	idLocalizacao int auto_increment primary key,
     Localizacao varchar(30),
