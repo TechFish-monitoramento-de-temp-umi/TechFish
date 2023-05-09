@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="../public/css/style-cadastroEmpresa.css">
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="css/style-cadastroEmpresa.css">
+    
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <!--header inicio-->
     <div class="header">
         <div class="container-header">
-            <img src="../img/logo.PNG">
+            <img src="img/logo.PNG">
             <ul class="NavBar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="login.html">Gráficos</a></li>
@@ -28,70 +28,74 @@
     <!--header fim-->
 
 
-   
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <!-- <span id="mensagem_erro"></span> -->
-            </div>
+
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <!-- <span id="mensagem_erro"></span> -->
         </div>
-        <div class="geral">
-            <div id="cadastro" class="cadastro">
-                <h2 class="titulo">Cadastrar Empresa</h2>
-                <label for="Nome_da_empresa" class="input">Nome da empresa</label>
+    </div>
+    <div class="geral">
+        <div id="cadastro" class="cadastro">
+            <h2 class="titulo">Cadastrar Empresa</h2>
+            <label for="Nome_da_empresa" class="input">Nome da empresa</label>
+            <div class="input">
+                <input id="nome_empresa" name="nome_empresa" type="text">
+                <br><br>
+                <label for="CNPJ">CNPJ</label>
                 <div class="input">
-                    <input id="nome_empresa" name="nome_empresa" type="text">
-                    <br><br>
-                    <label for="CNPJ">CNPJ</label>
-                    <div class="input">
-                        <input id="CNPJ" name="CNPJ" type="number">
-                    </div>
-                    <br>
-                    <label for="Endereco">Endereço</label>
-                    <div class="input">
-                        <input id="Endereco" name="Endereço" type="text">
-                    </div>
-                    <br>
-                    <label for="Telefone">Telefone</label>
-                    <div class="input">
-                        <input id="Telefone" name="Telefone" type="number">
-                    </div>
-                    <br>
-                    <label for="Email">Email</label>
-                    <div class="input">
-                        <input type="email" id="Email" name="Email" type="text">
-                    </div>
-                    <br>
-                    <label for="senha">Senha</label>
-                    <div class="input">
-                        <input type="password" id="Senha" name="senha" type="text">
-                        <br><br>
-                        <label for="senha">Confirmar senha</label>
-                        <div class="input">
-                            <input type="password" id="Senha2" name="senha" type="text" >
-                            <br><br>
-                            <button onclick="Cadastrar()" class="botao"><b>Cadastrar</b></button><br><br>
-                            <div class="validacao">
-                             <div id="div_validacao"></div>
-                        </div>
-    
-                    </div>
+                    <input id="CNPJ" name="CNPJ" type="number">
                 </div>
-                
+                <br>
+                <label for="Endereco">Rua</label>
+                <div class="input">
+                    <input id="rua" name="Endereço" type="text">
+                </div>
+                <br>
+                <label for="Endereco">Número</label>
+                <div class="input">
+                    <input id="numero" name="Endereço" type="text">
+                </div>
+                <br>
+                <label for="Endereco">Cidade</label>
+                <div class="input">
+                    <input id="cidade" name="Endereço" type="text">
+                </div>
+                <br>
+                <label for="Telefone">Telefone</label>
+                <div class="input">
+                    <input id="Telefone" name="Telefone" type="number">
+                </div>
+                <br>
+                <label for="Email">Email</label>
+                <div class="input">
+                    <input type="email" id="Email" name="Email" type="text">
+                </div>
+                <br>
+
+                <br><br>
+                <button onclick="Cadastrar()" class="botao"><b>Cadastrar</b></button><br><br>
+                <div class="validacao">
+                    <div id="div_validacao"></div>
+                </div>
+
             </div>
         </div>
-    
-    <div id="div_aguardar" class="loading-div">
+
+    </div>
+    </div>
+
+    <!-- <div id="div_aguardar" class="loading-div">
         <img src="./assets/circle-loading.gif" id="loading-gif">
     </div>
 
-    <div id="div_erros_login"></div>
-    
+    <div id="div_erros_login"></div> -->
+
 
     <!--footer inicio-->
     <div class="rodaPé">
 
         <h4></h4>
-        <img src="../img/logo.PNG" class="img3">
+        <img src="img/logo.PNG" class="img3">
         <ul class="bula">
             <li class="roda">Inicio</li>
             <li><a href="index.html" class="roda">Home</a></li>
@@ -131,13 +135,13 @@
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_empresa.value;
         var cnpjVar = CNPJ.value;
-        var endereçoVar = Endereco.value;
+        var ruaVar = rua.value;
+        var numeroVar = numero.var;
+        var cidadeVar = cidade.value;
         var telefoneVar = Telefone.var;
         var emailVar = Email.value;
-        var senhaVar = Senha.value;
-        var confirmacaoSenhaVar = Senha2.value;
 
-        if (nomeVar == "" || cnpjVar == "" || endereçoVar == "" || telefoneVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || cnpjVar == "" || ruaVar == "" || numeroVar == "" || cidadeVar == "" || telefoneVar == "" || emailVar == "" ) {
             // cardErro.style.display = "block"
             // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -149,7 +153,7 @@
         }
 
         // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
+        fetch("/empresa/cadastrar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -159,10 +163,11 @@
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 cnpjServer: cnpjVar,
-                endereçoServer: endereçoVar,
+                ruaServer: ruaVar,
+                numeroServer: numeroVar,
+                cidadeServer: cidadeVar,
                 telefoneServer: telefoneVar,
-                emailServer: emailVar,
-                senhaServer: senhaVar
+                emailServer: emailVar
             })
         }).then(function (resposta) {
 

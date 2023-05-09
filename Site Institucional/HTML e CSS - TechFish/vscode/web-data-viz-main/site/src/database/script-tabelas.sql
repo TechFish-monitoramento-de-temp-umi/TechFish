@@ -15,8 +15,6 @@ create table Empresa(
     Rua varchar(50),
     Numero varchar(5),
     Cidade varchar(45),
-    CEP varchar(9),
-    Responsável varchar(45),
     email_responsavel varchar(50),
     telefone_responsavel varchar(11)
 );
