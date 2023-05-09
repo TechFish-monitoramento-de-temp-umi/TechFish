@@ -8,6 +8,7 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="css/style-cadastroCliente.css">
     <link rel="shortcut icon" href="img/logo.PNG" type="image/x-icon">
+    <script src="js/funcoes.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
                 <li><a href="login.html">Gráficos</a></li>
                 <li><a href="Simulador.html">Simulador</a></li>
                 <li><a href="Home-cadastro.html">Cadastro</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="login-tech.html">Login</a></li>
             </ul>
         </div>
     </div>
@@ -108,7 +109,7 @@
 
 
 
-        // aguardar();
+        aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -119,35 +120,35 @@
         var senhaVar = Senha.value;
         var confirmacaoSenhaVar = Senha2.value;
 
-        if (nomeVar == "" || EmpresaVar == "" || telefoneVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            // cardErro.style.display = "block"
-            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        // if (nomeVar == "" || EmpresaVar == "" || telefoneVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        //     // cardErro.style.display = "block"
+        //     // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
-            // finalizarAguardar();
-            if (emailVar.indexOf('@') < 0 || emailVar.indexOf('.com') < 0) {
+        //     // finalizarAguardar();
+        //     if (emailVar.indexOf('@') < 0 || emailVar.indexOf('.com') < 0) {
 
-                div_validacao.innerHTML = `Email invalido <br><br>`
+        //         div_validacao.innerHTML = `Email invalido <br><br>`
 
-            } else if (senhaVar.length < 7) {
+        //     } else if (senhaVar.length < 7) {
 
-                div_validacao.innerHTML = `A senha tem que ter no mínino 7 caracteres`
+        //         div_validacao.innerHTML = `A senha tem que ter no mínino 7 caracteres`
 
-            } else if (confirmacaoSenhaVar != senhaVar) {
+        //     } else if (confirmacaoSenhaVar != senhaVar) {
 
-                div_validacao.innerHTML = `Senha incompativel`
+        //         div_validacao.innerHTML = `Senha incompativel`
 
 
-            } else {
-                div_validacao.innerHTML = ``
-                setTimeout(() => {
-                    window.location = "login.html";
-                }, "0000")
-            }
-            return false;
-        }
-        else {
-            // setInterval(sumirMensagem, 5000)
-        }
+        //     } else {
+        //         div_validacao.innerHTML = ``
+        //         setTimeout(() => {
+        //             window.location = "login.html";
+        //         }, "0000")
+        //     }
+        //     return false;
+        // }
+        // else {
+        //     // setInterval(sumirMensagem, 5000)
+        // }
 
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
@@ -169,29 +170,29 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                // cardErro.style.display = "block";
+                cardErro.style.display = "block";
 
-                // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {
-                    window.location = "login.html";
-                }, "2000")
+                    window.location = "login-tech.html";
+                }, "1000")
 
                 limparFormulario();
-                // finalizarAguardar();
+                finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            // finalizarAguardar();
+            finalizarAguardar();
         });
 
         return false;
     }
 
     function sumirMensagem() {
-        // cardErro.style.display = "none"
+        cardErro.style.display = "none"
     }
 
 

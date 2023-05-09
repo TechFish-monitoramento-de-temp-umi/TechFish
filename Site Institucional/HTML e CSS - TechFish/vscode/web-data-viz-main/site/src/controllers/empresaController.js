@@ -11,13 +11,13 @@ function listar(req, res) {
 
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    var nome = nome_empresa.value;
-    var cnpj = CNPJ.value;
-    var rua = rua.value;
-    var numero = numero.value;
-    var cidade = cidade.value;
-    var telefone = Telefone.var;
-    var email = Email.value;
+    var nome = req.body.nomeServer;
+    var cnpj = req.body.cnpjServer;
+    var rua = req.body.ruaServer;
+    var numero = req.body.numeroServer;
+    var cidade = req.body.cidadeServer;
+    var telefone = req.body.telefoneServer;
+    var email = req.body.emailServer;
 
    
     // Faça as validações dos valores
@@ -26,11 +26,11 @@ function cadastrar(req, res) {
     } else if (cnpj == undefined) {
         res.status(400).send("Sua empresa está undefined!");
     } else if (rua == undefined) {
-        res.status(400).send("Seu telefonel está undefined!");
-    } else if (numer == undefined) {
-        res.status(400).send("Seu telefonel está undefined!");
+        res.status(400).send("Seu rua está undefined!");
+    } else if (numero == undefined) {
+        res.status(400).send("Seu numero está undefined!");
     }else if (cidade == undefined) {
-        res.status(400).send("Seu telefonel está undefined!");
+        res.status(400).send("Seu cidade está undefined!");
     } else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
     } else if (telefone == undefined) {
