@@ -32,7 +32,7 @@
 
     <div class="alerta_erro">
         <div class="card_erro" id="cardErro">
-            <!-- <span id="mensagem_erro"></span> -->
+            <span id="mensagem_erro"></span>
         </div>
     </div>
     <div class="geral">
@@ -86,7 +86,7 @@
     </div>
 
     <div id="div_aguardar" class="loading-div">
-        <img src="img/logo.PNG" id="loading-gif">
+        <img src="img/aguarde-orange.gif" id="loading-gif">
     </div>
 
     <div id="div_erros_login"></div>
@@ -177,11 +177,11 @@
             if (resposta.ok) {
                 cardErro.style.display = "block";
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para cadastrar o usuario...";
 
                 setTimeout(() => {
                     window.location = "cadastro.html";
-                }, "1000")
+                }, "2000")
 
                 limparFormulario();
                 finalizar();

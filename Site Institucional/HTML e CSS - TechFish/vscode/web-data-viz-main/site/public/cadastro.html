@@ -24,6 +24,12 @@
             </ul>
         </div>
     </div>
+    
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+    </div>
     <div class="geral">
         <div id="cadastro" class="cadastro">
             <h2 class="titulo">Cadastrar Usuario</h2>
@@ -63,6 +69,11 @@
                 <Div id="div_validacao"></Div>
             </div>
         </div>
+    </div>
+
+    
+    <div id="div_aguardar" class="loading-div">
+        <img src="img/aguarde-orange.gif" id="loading-gif">
     </div>
 
     <div class="rodaPé">
@@ -106,10 +117,7 @@
 <script>
 
     function Cadastrar() {
-
-
-
-        aguardar();
+          aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -120,35 +128,35 @@
         var senhaVar = Senha.value;
         var confirmacaoSenhaVar = Senha2.value;
 
-        // if (nomeVar == "" || EmpresaVar == "" || telefoneVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-        //     // cardErro.style.display = "block"
-        //     // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        if (nomeVar == "" || EmpresaVar == "" || telefoneVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
-        //     // finalizarAguardar();
-        //     if (emailVar.indexOf('@') < 0 || emailVar.indexOf('.com') < 0) {
+            finalizarAguardar();
+            // if (emailVar.indexOf('@') < 0 || emailVar.indexOf('.com') < 0) {
 
-        //         div_validacao.innerHTML = `Email invalido <br><br>`
+            //     div_validacao.innerHTML = `Email invalido <br><br>`
 
-        //     } else if (senhaVar.length < 7) {
+            // } else if (senhaVar.length < 7) {
 
-        //         div_validacao.innerHTML = `A senha tem que ter no mínino 7 caracteres`
+            //     div_validacao.innerHTML = `A senha tem que ter no mínino 7 caracteres`
 
-        //     } else if (confirmacaoSenhaVar != senhaVar) {
+            // } else if (confirmacaoSenhaVar != senhaVar) {
 
-        //         div_validacao.innerHTML = `Senha incompativel`
+            //     div_validacao.innerHTML = `Senha incompativel`
 
 
-        //     } else {
-        //         div_validacao.innerHTML = ``
-        //         setTimeout(() => {
-        //             window.location = "login.html";
-        //         }, "0000")
-        //     }
-        //     return false;
-        // }
-        // else {
-        //     // setInterval(sumirMensagem, 5000)
-        // }
+            // } else {
+            //     div_validacao.innerHTML = ``
+            //     setTimeout(() => {
+            //         window.location = "login.html";
+            //     }, "0000")
+            // }
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
 
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
