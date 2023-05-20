@@ -135,7 +135,7 @@ text-decoration: none;
 }
 .div-retorno{
     background-color: rgb(242, 146, 54, 0.9);
-    width: 80%;
+    width: 50%;
     margin: auto;
     margin-top: 80px;
     border-radius: 20px;
@@ -147,6 +147,10 @@ text-decoration: none;
     font-size: large;
     text-align: center;
     flex-direction: column;
+}
+button:hover{
+        transform: scale(1.1);
+        transition: 0.5s ease-in-out;
 }
 .div-retorno span{
     color: red;
