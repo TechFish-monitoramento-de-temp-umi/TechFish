@@ -6,6 +6,25 @@ body{
     background-attachment: fixed;
     margin: 0;
 }
+
+/* Deixar o scrollzin bonitin */
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #161515; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #e46c00;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #aa4f00c7;
+  }
+
+
+/* Começo da Navbar */
+
 .container-header{
     display: flex;
     width: 90%;
@@ -14,7 +33,7 @@ body{
 .header{
     width: 100%;
     background-color: #161515;
-    border-bottom: #e46c00 4px solid;
+    border-bottom: #e46c00 2px solid;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -28,40 +47,67 @@ body{
     border-radius: 120px;
 }
 .NavBar{
-    width: 400px;
+    width: 1000px;
     display: flex;
     color: #e46c00;
     list-style: none;
     justify-content: space-evenly;  
 }
-a{
+
+
+.NavBar a{
     text-decoration: none;
     color: #e46c00;
 }
+
+
+
 .header a{
     background-color: #161515;
     padding: 5px;
-    border-radius: 5px;
-    border: #e46c00 2px solid;
-    font-size: larger;
+    font-size: x-large;
 }
+
+a{
+
+color: #e46c00;
+text-decoration: none;
+
+}
+
+
+.NavBar li:hover{
+ transform: scale(1.1);
+ transition: 0.5s ease-in-out;
+}
+
+.underline{
+
+    text-decoration: underline #e46c00 3px;
+    
+}
+
+/* Fim da Navbar */
+
+/* Começo do seja bem vindo */
+
 .container-intro{
     display: flex;
     width: 90%;
     margin: auto;
     justify-content: center;
 }
+
 .intro{
-    width: 201.5vh;
-    background-image:url(../img/rest2.jpg);
-    background-position: auto;
-    background-repeat: no-repeat;
+    height: 80vh;
+    background-image: linear-gradient(to bottom, transparent 0%, #161515 100%), url(../img/rest2.jpg);
     background-size: cover;
     background-position: auto;
     display: flex;
     background-color: #16161698;
     padding: 45px;
  }
+
 .recepcao{
     display: flex;
     background-color:rgb(242, 146, 54, 0.9);
@@ -89,14 +135,21 @@ a{
     color: #161515;
     font-size: larger;
 }
+
+/* Fim do seja bem vindo */
+
+/* Cards começo */
+
 .conteudo{
     width: 100%;
+    height: 70vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: #16161698;
+    background-color: #161515;
     padding-bottom: 30px;
-    border-top: #f29236 solid 3px;
+
+   
 }
 .container-cont{
     display: flex;
@@ -128,26 +181,38 @@ a{
     border-radius: 30px;
     border: #f29236 solid 4px;
 }
+
+.card:hover {
+
+transform: scale(1.1);
+transition: 1s;
+
+}
+
 .card h4{
     color: #ffffff;
     background-color: #161515;
     padding: 7px;
     border-radius: 5px;
-}.contato{
+}
+
+/* Cards Fim */
+
+/* Começo dos contatos */
+
+.contato{
     width: 100%;
+    height: 140vh;
     display: flex;
     background-color: #16161698;
 }
 .container-contato{
     display: flex;
     width: 200vh;
-    background-image:url(../img/rest1.jpg); 
+    border-bottom: #e46c00 2px solid;
+    background-image: linear-gradient(to top, transparent 0%, #161515 107%), url(../img/rest1.jpg); 
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-    margin: auto;
-    border-top: #e46c00 3px solid;
-    border-bottom: #e46c00 3px solid;
     padding: 60px;
     justify-content: space-around;
     flex-direction: column;
@@ -172,16 +237,28 @@ a{
     font-size: larger;
     border: #161515 4px solid;
 }
+
+.cont a:hover{
+
+transform: scale(1.1);
+transition: 0.5s ease-in-out;
+
+}
+
 .cont a{
     background-color: #161515;
     padding: 5px;
     border-radius: 10px;
 }
 
+/* Fim dos contatos */
+
+/* Começo do footer */
+
 .rodaPé {
     background-position: start;
     display: flex;
-         height: 120px;
+         height: 20vh;
         width: 100%;
         background-color: black;
         color:  rgb(242, 146, 54);
@@ -234,3 +311,5 @@ a{
 
 
         }
+
+        /* Fim do footer */

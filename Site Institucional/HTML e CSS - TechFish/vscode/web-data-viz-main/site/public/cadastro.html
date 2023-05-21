@@ -19,7 +19,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="login.html">Gráficos</a></li>
                 <li><a href="Simulador.html">Simulador</a></li>
-                <li><a href="Home-cadastro.html">Cadastro</a></li>
+                <li class="underline"><a href="Home-cadastro.html">Cadastro</a></li>
                 <li><a href="login-tech.html">Login</a></li>
             </ul>
         </div>
@@ -73,7 +73,7 @@
 
     
     <div id="div_aguardar" class="loading-div">
-        <img src="img/aguarde-orange.gif" id="loading-gif">
+    
     </div>
 
     <div class="rodaPé">
@@ -84,7 +84,7 @@
             <li class="roda">Inicio</li>
             <li><a href="index.html" class="roda">Home</a></li>
             <li><a href="Simulador.html" class="roda">Simulador</a></li>
-            <li><a href="Cadastro.html" class="roda">Cadastro</a></li>
+            <li class="underline"><a href="Cadastro.html" class="roda">Cadastro</a></li>
             <li><a href="login.html" class="roda">Login</a></li>
         </ul>
 
@@ -115,6 +115,14 @@
 </html>
 
 <script>
+
+function descriçao(){
+    div_desc.innerHTML = 'Somos uma empresa de monitoramento de temperatura e umidade <br> do seu restaurante de culinária japonesa '
+}
+
+function contato(){
+    div_Contato.innerHTML = `Email: TechFish@gmail.com <br> telefone: (11) 97501-2301 `
+}
 
     function Cadastrar() {
           aguardar();

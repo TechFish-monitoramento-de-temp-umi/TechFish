@@ -7,6 +7,24 @@ body{
     background-attachment: fixed;
     margin: 0;
 }
+
+/* Deixar o scrollzin bonitin */
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #161515; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #e46c00;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #aa4f00c7;
+  }
+
+ /* Começo da Navbar */
+
 .container-header{
     display: flex;
     width: 90%;
@@ -15,7 +33,7 @@ body{
 .header{
     width: 100%;
     background-color: #161515;
-    border-bottom: #e46c00 4px solid;
+    border-bottom: #e46c00 2px solid;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -29,23 +47,50 @@ body{
     border-radius: 120px;
 }
 .NavBar{
-    width: 400px;
+    width: 1000px;
     display: flex;
     color: #e46c00;
     list-style: none;
     justify-content: space-evenly;  
 }
-a{
+
+
+.NavBar a{
     text-decoration: none;
     color: #e46c00;
 }
+
+
+
 .header a{
     background-color: #161515;
     padding: 5px;
-    border-radius: 5px;
-    border: #e46c00 2px solid;
-    font-size: larger;
+    font-size: x-large;
 }
+
+a{
+
+color: #e46c00;
+text-decoration: none;
+
+}
+
+
+.NavBar li:hover{
+ transform: scale(1.1);
+ transition: 0.5s ease-in-out;
+}
+
+.underline{
+
+    text-decoration: underline #e46c00 3px;
+    
+}
+
+/* Fim da Navbar */
+
+
+
 .banner{
     background-color: #16151596;
     background-image:url(../img/rest2.jpg);
@@ -56,6 +101,7 @@ a{
     width:100%;
     display: flex;
     flex-direction: column;
+    border-bottom: #e46c00 2px solid;
 }
 .caixa-login{
     margin: auto;
@@ -118,16 +164,31 @@ a{
     color: #161515;
     font-size: large;
 }
+
+.span {
+
+color: #161515;
+
+}
+
+.span:hover{
+
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out;
+
+}
+
+/* Começo do footer */
+
 .rodaPé {
     background-position: start;
     display: flex;
-         height: 120px;
+         height: 20vh;
         width: 100%;
         background-color: black;
-        color: #e46c00;
+        color:  rgb(242, 146, 54);
         text-align: center;
         justify-content: space-evenly;
-        border-top: #e46c00 4px solid;
 }
 
 .rodaPé h4{
@@ -151,7 +212,7 @@ a{
   .roda {
     width: 100px;
     display: flex;
-    color: #e46c00;
+    color: rgb(242, 146, 54) ;
     list-style: none;
     
   }
@@ -175,6 +236,8 @@ a{
 
 
         }
+
+        /* Fim do footer */
 
         .validacao{
             width: 40%;
