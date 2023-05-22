@@ -148,7 +148,7 @@ text-decoration: none;
     text-align: center;
     flex-direction: column;
 }
-button:hover{
+.calculadora button:hover{
         transform: scale(1.1);
         transition: 0.5s ease-in-out;
 }
@@ -173,9 +173,6 @@ button:hover{
     text-align: center; 
 
 }
-
-
-  
   
 .hjk {
     display: flex;

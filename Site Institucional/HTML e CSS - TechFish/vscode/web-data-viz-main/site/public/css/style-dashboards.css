@@ -99,14 +99,12 @@ text-decoration: none;
 
 .dashboards {
     display: flex;
-    height: auto;
+    height: 140vh;
     width: 100%;
     background-image: url(../img/rest11.jpg);
-    background-position: auto;
-    background-repeat: no-repeat;
     background-size: cover;
     background-color: #16161698;
-    padding: 45px;
+    border-bottom: solid 2px #e46c00 ;
 }
 
 .dash-temp {
@@ -119,12 +117,12 @@ text-decoration: none;
 
 .card {
     background-color: #FF914D;
-    width: 500px;
-    height: 400px;
+    width: 65%;
+    height: 60vh;
     border-radius: 30px;
-    border: #161515 4px solid;
-    justify-content: space-evenly;
-    margin-left: 5px;
+    border: #161515 2px solid;
+    justify-content: space-between;
+
 }
 
 .card-menor {
@@ -145,7 +143,7 @@ text-decoration: none;
     flex-direction: column;
     background-color: #FF914D;
     border-radius: 30px;
-    border: #161515 4px solid;
+    border: #161515 2px solid;
     height: 150px;
     width: 400px;
     font-size: larger;
@@ -153,10 +151,11 @@ text-decoration: none;
     justify-content: center;
 }
 
-.card img{
-    height: 350px;
-    width: 450px;
-    border-radius: 30px;
+.chartjs-render-monitor{
+    height: 10rem;
+    width: 20rem;
+  
+    
 }
 
 .texto{
