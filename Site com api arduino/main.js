@@ -15,9 +15,9 @@ const serial = async (
         {
             host: 'localhost',
             port: 3306,
-            user: 'root',
-            password: 'rootpassword',
-            database: 'TechFish'
+            user: 'techfish',
+            password: 'teste123@',
+            database: 'techfish'
         }
     ).promise();
 
@@ -47,8 +47,9 @@ const serial = async (
 
         if (HABILITAR_OPERACAO_INSERIR) {
             await poolBancoDados.execute(
-                'INSERT INTO leitura  VALUES',
-                [1, '2023-04-13 11:30', dht11Temperatura, lm35Temperatura, dht11Umidade, 1]
+                `INSERT INTO Leitura (dtHora_leitura, tempDHT11, tempLM35, umidade, fkSensores)VALUES
+                (now(), ?, ?, ?, 1)`,
+                [dht11Temperatura, lm35Temperatura, dht11Umidade]
             );
         }
 
