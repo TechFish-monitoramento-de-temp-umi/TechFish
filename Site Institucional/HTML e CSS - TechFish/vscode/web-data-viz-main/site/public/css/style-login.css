@@ -129,9 +129,20 @@ text-decoration: none;
     font-size: large;
 }
 .caixa-login input{
-    border-radius: 10px;
+    color: #161515;
     border: none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 2px solid #161515;
+    font-size: large;
 }
+
+::-webkit-input-placeholder {
+
+color: #221c1c96;
+
+}
+
 .caixa-login button{
     background-color: #161515;
     color: #e46c00;
@@ -171,12 +182,27 @@ color: #161515;
 
 }
 
-.span:hover{
-
-    transform: scale(1.2);
-    transition: 0.5s ease-in-out;
-
-}
+.alerta_erro{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #e6001f 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+  }
+  
+  .card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+  }
 
 /* Começo do footer */
 
