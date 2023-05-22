@@ -1,0 +1,218 @@
+*{
+    font-family: monospace;
+}
+body{
+    background-image: linear-gradient(#e6e6e6, #a7a7a7);
+    background-image:url(../img/rest2.jpg); 
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: auto;
+}
+
+/* Deixar o scrollzin bonitin */
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #161515; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #e46c00;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #aa4f00c7;
+  }
+
+/* Começo da Navbar */
+
+.container-header{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+.header{
+    width: 100%;
+    background-color: #161515;
+    border-bottom: #e46c00 2px solid;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.header .container-header{
+    justify-content: space-between;
+    align-items: center;
+}
+.header img{
+    width: 140px;
+    height: 100px;
+    border-radius: 120px;
+}
+.NavBar{
+    width: 1000px;
+    display: flex;
+    color: #e46c00;
+    list-style: none;
+    justify-content: space-evenly;  
+}
+
+
+.NavBar a{
+    text-decoration: none;
+    color: #e46c00;
+}
+
+
+
+.header a{
+    background-color: #161515;
+    padding: 5px;
+    font-size: x-large;
+}
+
+a{
+
+color: #e46c00;
+text-decoration: none;
+
+}
+
+
+.NavBar li:hover{
+ transform: scale(1.1);
+ transition: 0.5s ease-in-out;
+}
+
+.underline{
+
+    text-decoration: underline #e46c00 3px;
+    
+}
+
+/* Fim da Navbar */
+.geral{
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+}
+.calculadora{
+    margin: auto;
+    width: 50%;
+    height: 400px;
+    display: flex;
+    background-color: rgb(242, 146, 54, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+    border: #161515 solid 4px;
+    border-radius: 40px;
+}
+.calculadora h1{
+    background-color: #161515;
+    color: #e46c00;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: xx-large;
+}
+.calculadora p{
+    color: #161515;
+    font-size: large;
+}
+.calculadora input{
+    border-radius: 10px;
+    border: none;
+}
+.calculadora button{
+    background-color: #161515;
+    color: #e46c00;
+    border: none;
+    width: 80px;
+    height: 25px;
+    border-radius: 20px;
+}
+.div-retorno{
+    background-color: rgb(242, 146, 54, 0.9);
+    width: 50%;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 20px;
+    padding: 20px;
+    border: #161515 solid 4px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 40px;
+    font-size: large;
+    text-align: center;
+    flex-direction: column;
+}
+button:hover{
+        transform: scale(1.1);
+        transition: 0.5s ease-in-out;
+}
+.div-retorno span{
+    color: red;
+}
+
+/* Começo do footer */
+
+.rodaPé {
+    background-position: start;
+    display: flex;
+         height: 20vh;
+        width: 100%;
+        background-color: black;
+        color:  rgb(242, 146, 54);
+        text-align: center;
+        justify-content: space-evenly;
+}
+
+.rodaPé h4{
+    text-align: center; 
+
+}
+
+
+  
+  
+.hjk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
+    margin: 0;
+    
+  }
+
+  .roda {
+    width: 100px;
+    display: flex;
+    color: rgb(242, 146, 54) ;
+    list-style: none;
+    
+  }
+
+    .img3 {
+        width: 140px;
+        height: 100px;
+        border-radius: 120px;
+        margin-left: -15%;
+        margin-top: 10px;
+    }
+
+    .botãoroda {
+        background-color: black;
+        display: flex;
+        color: #e46c00;
+        border: none;
+        width: 400px;
+        text-align: center;
+        
+
+
+        }
+
+        /* Fim do footer */

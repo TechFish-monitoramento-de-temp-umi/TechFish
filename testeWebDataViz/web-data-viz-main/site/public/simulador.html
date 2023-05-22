@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+    <link rel="stylesheet" href="css/style-simulador.css">
+    <link rel="shortcut icon" href="img/logo.PNG" type="image/x-icon">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container-header">
+            <img src="img/logo.PNG">
+            <ul class="NavBar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login-tech.html">Gráficos</a></li>
+                <li class="underline"><a href="Simulador.html">Simulador</a></li>
+                <li><a href="Home-cadastro.html">Cadastro</a></li>
+                <li><a href="login-tech.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="geral">
+        <div class="calculadora">
+            <h1>Simulador Financeiro</h1>
+            <p>Razão Social:<input id="input_Razao_Social" type="text"></p>
+            <p>Insira a espécie do peixe:<input id="id_especie"> </p>
+            <p>Custo do quilo do peixe <input id="input_valor_peixe" type="number"></p>
+            <p>Total de quilos perdidos no mês: <input id="input_peixe_utilizado" type="number"></p>
+            <button onclick="Calcular()">Calcular</button> <br>
+            <div id="div_mensagemcampo"></div>
+        </div>
+        <div id="div_retorno" class="div-retorno">
+            Ao clicar em calcular, os dados analisados aparecerão aqui!
+        </div>
+    </div>
+    <div class="rodaPé">
+
+        <h4></h4>
+        <img src="img/logo.PNG" class="img3">
+        <ul class="bula">
+            <li class="roda">Inicio</li>
+            <li><a href="index.html" class="roda">Home</a></li>
+            <li><a href="Simulador.html" class="roda">Simulador</a></li>
+            <li><a href="Cadastro.html" class="roda">Cadastro</a></li>
+            <li><a href="login.html" class="roda">Login</a></li>
+        </ul>
+
+        <ul class="bula">
+            <li class="roda">Sobre nós</li>
+            <button onclick="descriçao()" class="botãoroda">Descrição</button>
+            <div id="div_desc"></div>
+            <button onclick="contato()" class="botãoroda">Contato</button>
+            <div id="div_Contato"></div>
+
+
+        </ul>
+
+        <ul class="bula">
+            <li class="roda">Redes Sociais</li>
+            <li><a href="https://www.instagram.com/techf_ish/" class="roda">Instagram</a></li>
+
+        </ul>
+
+
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    function Calcular() {
+        //Dados Recebidos pelos Inputs sendo colocado em variáveis
+        var Razao_Social = input_Razao_Social.value;
+        var especie = id_especie.value;
+
+        var Valor_Peixe = Number(input_valor_peixe.value);
+        var Peixe_perdido = Number(input_peixe_utilizado.value);
+
+        // Cálculos para verificar se poderá haver prejuízos
+        // var qtdPeixes = Estoque - Peixe_Utilizado;
+        var Valor_Prejuizo = Peixe_perdido * Valor_Peixe;
+        // var Porcent_Peixes = Math.floor(qtdPeixes * (100 / Estoque));
+
+        // Apresentando ao cliente a mensagem caso tenha peixes que não foram vendidos.
+        if (Peixe_perdido > 0) {
+            //Deixando o fundo da div branco apenas quando chamar o if
+            div_retorno.innerHTML = `
+        <br><p class="p_titulo_retorno">${Razao_Social}, esse é o <span> prejuízo</span> causado por não utilizar nossos serviços: </p><br>
+        ° ${Peixe_perdido} quilos de  ${especie} ficaram no estoque.<br>
+        ° R$${Valor_Prejuizo} foram gastos (desperdiçados) nos peixes não utilizados. <br><br>
+        Com os nossos serviços de monitoramento garantimos que de 10 a 12 dias, em uma temperatura média de 5°C, é o tempo máximo para os peixes serem utilizados.
+        `;
+        }
+
+
+        if (Razao_Social == "" || especie == "" || Valor_Peixe == "") {
+            div_mensagemcampo.innerHTML = "Todos os campos devem ser preenchidos"
+        } else if (Peixe_perdido == 0) {
+            div_retorno.innerHTML = 'Não haverá prejuízos, todos os peixes foram vendidos !'
+        }
+    }
+
+    function descriçao(){
+    div_desc.innerHTML = 'Somos uma empresa de monitoramento de temperatura e umidade <br> do seu restaurante de culinária japonesa '
+}
+
+function contato(){
+    div_Contato.innerHTML = `Email: TechFish@gmail.com <br> telefone: (11) 97501-2301 `
+}
+
+</script>

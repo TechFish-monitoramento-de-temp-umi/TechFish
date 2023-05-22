@@ -1,0 +1,316 @@
+*{
+    font-family: monospace;
+}
+body{
+    background-image: linear-gradient(#e6e6e6, #a7a7a7);
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/* Deixar o scrollzin bonitin */
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #161515; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #e46c00;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #aa4f00c7;
+  }
+
+
+/* Começo da Navbar */
+
+.container-header{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+.header{
+    width: 100%;
+    background-color: #161515;
+    border-bottom: #e46c00 2px solid;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.header .container-header{
+    justify-content: space-between;
+    align-items: center;
+}
+.header img{
+    width: 140px;
+    height: 100px;
+    border-radius: 120px;
+}
+.NavBar{
+    width: 1000px;
+    display: flex;
+    color: #e46c00;
+    list-style: none;
+    justify-content: space-evenly;  
+}
+
+
+.NavBar a{
+    text-decoration: none;
+    color: #e46c00;
+}
+
+
+
+.header a{
+    background-color: #161515;
+    padding: 5px;
+    font-size: x-large;
+}
+
+a{
+
+color: #e46c00;
+text-decoration: none;
+
+}
+
+
+.NavBar li:hover{
+ transform: scale(1.1);
+ transition: 0.5s ease-in-out;
+}
+
+.underline{
+
+    text-decoration: underline #e46c00 3px;
+    
+}
+
+/* Fim da Navbar */
+
+/* Começo do seja bem vindo */
+
+.container-intro{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+
+.intro{
+    height: 80vh;
+    background-image: linear-gradient(to bottom, transparent 0%, #161515 100%), url(../img/rest2.jpg);
+    background-size: cover;
+    background-position: auto;
+    display: flex;
+    background-color: #16161698;
+    padding: 45px;
+ }
+
+.recepcao{
+    display: flex;
+    background-color:rgb(242, 146, 54, 0.9);
+    width: 50vw;
+    height: 30vh;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    vertical-align: center;
+    padding: 20px;
+    text-align: center;
+    border: 4px solid #161515;
+}
+.recepcao h2{
+    color: #161515;
+    font-size: xx-large;
+    border-bottom: 3px solid #161616;
+}
+.recepcao h3{
+    color: #161515;
+    font-size: x-large;
+}
+.recepcao p{
+    color: #161515;
+    font-size: larger;
+}
+
+/* Fim do seja bem vindo */
+
+/* Cards começo */
+
+.conteudo{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #161515;
+    padding-bottom: 30px;
+
+   
+}
+.container-cont{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    padding-top: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.conteudo h3{
+    color: #e46c00;
+    font-size: xx-large;
+    text-align: center;
+}
+.card img{
+    width: 100px;
+    height: 100px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    width: 300px;
+    height: 225px;
+    justify-content: center;
+    border-radius: 30px;
+    border: #f29236 solid 4px;
+}
+
+.card:hover {
+
+transform: scale(1.1);
+transition: 1s;
+
+}
+
+.card h4{
+    color: #ffffff;
+    background-color: #161515;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+/* Cards Fim */
+
+/* Começo dos contatos */
+
+.contato{
+    width: 100%;
+    height: 140vh;
+    display: flex;
+    background-color: #16161698;
+}
+.container-contato{
+    display: flex;
+    width: 200vh;
+    border-bottom: #e46c00 2px solid;
+    background-image: linear-gradient(to top, transparent 0%, #161515 107%), url(../img/rest1.jpg); 
+    background-position: center;
+    background-size: cover;
+    padding: 60px;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.container-contato h3{
+    color: #e46c00;
+    font-size: xx-large;
+}
+.cont{
+    background-color: rgb(242, 146, 54, 0.9);
+    width: 500px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    justify-content: space-around;
+    border-radius: 30px;
+    font-size: larger;
+    border: #161515 4px solid;
+}
+
+.cont a:hover{
+
+transform: scale(1.1);
+transition: 0.5s ease-in-out;
+
+}
+
+.cont a{
+    background-color: #161515;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Fim dos contatos */
+
+/* Começo do footer */
+
+.rodaPé {
+    background-position: start;
+    display: flex;
+         height: 20vh;
+        width: 100%;
+        background-color: black;
+        color:  rgb(242, 146, 54);
+        text-align: center;
+        justify-content: space-evenly;
+}
+
+.rodaPé h4{
+    text-align: center; 
+
+}
+
+
+  
+  
+.hjk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
+    margin: 0;
+    
+  }
+
+  .roda {
+    width: 100px;
+    display: flex;
+    color: rgb(242, 146, 54) ;
+    list-style: none;
+    
+  }
+
+    .img3 {
+        width: 140px;
+        height: 100px;
+        border-radius: 120px;
+        margin-left: -15%;
+        margin-top: 10px;
+    }
+
+    .botãoroda {
+        background-color: black;
+        display: flex;
+        color: #e46c00;
+        border: none;
+        width: 400px;
+        text-align: center;
+        
+
+
+        }
+
+        /* Fim do footer */
